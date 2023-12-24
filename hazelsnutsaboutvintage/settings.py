@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +60,10 @@ ROOT_URLCONF = 'hazelsnutsaboutvintage.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR,'templates'), # required by allauth
+            os.path.join(BASE_DIR,'templates','allauth'), # required by allauth
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
