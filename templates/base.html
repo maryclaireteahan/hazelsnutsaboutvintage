@@ -68,7 +68,7 @@
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                            {% comment %} {% if request.user.is_authenticated %}
+                            {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <a href="#" class="dropdown-item">Product Management</a>
                                 {% endif %}
@@ -77,19 +77,19 @@
                             {% else %}
                                 <a href="#" class="dropdown-item">Register</a>
                                 <a href="#" class="dropdown-item">Login</a>
-                            {% endif %} {% endcomment %}
+                            {% endif %}
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        {% comment %} <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="#"> {% endcomment %}
+                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="#">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
-                                    {% comment %} {% if grand_total %}
+                                    {% if grand_total %}
                                         ${{ grand_total|floatformat:2 }}
                                     {% else %}
                                         $0.00
-                                    {% endif %} {% endcomment %}
+                                    {% endif %}
                                 </p>
                             </div>
                         </a>
@@ -135,8 +135,7 @@
     {% endblock %}
 
     {% block content %}
-    {% endblock %
-        }
+    {% endblock %}
 
     {% block postloadjs %}
     <script type="text/javascript">
