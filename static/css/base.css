@@ -8,6 +8,11 @@ body {
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Courier New', Courier, monospace;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 /* from Bulma */
 .icon {
@@ -55,10 +60,33 @@ body {
     border: 1px solid black !important;
 }
 
-.hero-container {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
+.button-container {
+    height: 70%;
     border-radius: 10px;
+    margin-top: 15em;
+    width: min-content;
+    display: flex;
+    justify-content: center;
+}
+
+.button-row {
+    background: rgba(251,199,14,.9);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0em 1em 5em 1em;
+    padding: 3em 1.5em 1em 1.5em;
+}
+
+.button-col{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar-bg {
@@ -76,14 +104,47 @@ body {
     text-align: center;
 }
 
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: rgba(251,199,14,.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.product-row{
+    margin-bottom: 1em;
+}
+
+.products {
+    margin-top: 15em;
+}
+
+.single-product {
+    font-weight: 1000;
+    font-size: 1.5em;
+}
+
 /* -------------------------------- Media Queries */
 
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
+/* Media query: large or landscape phones (576px and up) -----------------------------------------------576px----------------------------------------------------------------------- */
+@media screen and (min-width: 576px) {
+    .products {
+        margin-top: 10em;
+    }
+    
   }
-}
+  
+  /* Media query: tablets and larger (768px and up) ------------------------------------------------------768px----------------------------------------------------------------------- */
+  @media screen and (min-width: 768px) {
+  }
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
@@ -98,4 +159,19 @@ body {
     .header-container {
         padding-top: 164px;
     }
+
+    .products {
+        margin-top: 6em;
+    }
+
+    .button-container {
+        margin-top: 5em;
+    }
 }
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
