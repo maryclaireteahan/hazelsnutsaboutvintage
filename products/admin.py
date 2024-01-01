@@ -14,6 +14,10 @@ class ProductAdmin(admin.ModelAdmin):
     
     ordering = ('sku',)
     
+    
+    def get_categories(self, obj):
+        return ", ".join([c.name for c in obj.categories.all()])
+
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
