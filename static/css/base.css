@@ -132,6 +132,20 @@ body {
     font-size: 1.5em;
 }
 
+.product-details-container {
+    padding-top: 1em;
+    font-weight: 900;
+    font-size: 1.5em;
+}
+
+.product-details h2 {
+    font-weight: 900;
+}
+
+.product-image-details {
+    padding-top: 12em;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Media query: large or landscape phones (576px and up) -----------------------------------------------576px----------------------------------------------------------------------- */
@@ -144,6 +158,9 @@ body {
   
   /* Media query: tablets and larger (768px and up) ------------------------------------------------------768px----------------------------------------------------------------------- */
   @media screen and (min-width: 768px) {
+    .product-image-details {
+        padding-top: 7em;
+    }
   }
 
 /* fixed top navbar only on medium and up */
@@ -166,6 +183,10 @@ body {
 
     .button-container {
         margin-top: 5em;
+    }
+
+    .product-image-details {
+        padding-top: 4em;
     }
 }
 /* Slightly larger container on xl screens */
