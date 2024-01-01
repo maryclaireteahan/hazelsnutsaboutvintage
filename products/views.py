@@ -2,14 +2,13 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.db.models import Q
 from django.contrib import messages
 from .models import Product, Category, Brand
-
-# Create your views here.
+from django.db.models.functions import Lower 
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
     products = Product.objects.all()
-    query = None # This is for the search bar to keep the search term in the search bar after the search is done
+    query = None 
     categories = None
     brands = None
     sort = None
