@@ -11,21 +11,39 @@
             </div>
         </li>
         <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clothing
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+                <a href="{% url 'products' %}?category=dresses" class="dropdown-item">Dresses</a>
+                <a href="{% url 'products' %}?category=tops" class="dropdown-item">Tops</a>
+                <a href="{% url 'products' %}?category=bottoms" class="dropdown-item">Bottoms</a>
+                <a href="{% url 'products' %}?category=outerwear" class="dropdown-item">Outerwear</a>
+                <a href="{% url 'products' %}?category=dresses,tops,bottoms,outerwear" class="dropdown-item">All Clothing</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="brands-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Brands
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="brands-link">
-                <a href="" class="dropdown-item">By Brand</a>
-                <a href="" class="dropdown-item">All Brands</a>
+                <a href="{% url 'products' %}?brand=gucci" class="dropdown-item">Gucci</a>
+                <a href="{% url 'products' %}?brand=prada" class="dropdown-item">Prada</a>
+                <a href="{% url 'products' %}?brand=dior" class="dropdown-item">Dior</a>
+                <a href="{% url 'products' %}?brand=versace" class="dropdown-item">Versace</a>
+                <a href="{% url 'products' %}?brand=chanel" class="dropdown-item">Chanel</a>
+                <a href="{% url 'products' %}?brand=fendi" class="dropdown-item">Fendi</a>
+                <a href="{% url 'products' %}?brand=gucci,prada,dior,versace,chanel,fendi" class="dropdown-item">All Brands</a>
             </div>
+        </li>
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals, clearance"  class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>
