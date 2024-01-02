@@ -1,0 +1,6 @@
+
+
+
+
+
+[{"pk": 1, "model": "products.size", "fields": {"name": "xsmall", "friendly_name": "XSMALL"}}, {"pk": 2, "model": "products.size", "fields": {"name": "small", "friendly_name": "SMALL"}}, {"pk": 3, "model": "products.size", "fields": {"name": "medium", "friendly_name": "MEDIUM"}}, {"pk": 4, "model": "products.size", "fields": {"name": "large", "friendly_name": "LARGE"}}, {"pk": 5, "model": "products.size", "fields": {"name": "xlarge", "friendly_name": "XLARGE"}}, {"pk": 6, "model": "products.size", "fields": {"name": "large", "friendly_name": "XLARGE"}}]

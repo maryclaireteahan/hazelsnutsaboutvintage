@@ -87,6 +87,11 @@
                                             {% else %}
                                                 <p class="text-muted">No Brand</p>
                                             {% endif %}
+                                            {% if product.size %}
+                                            <p class="text-muted">Size:  {{ product.size|capfirst }}</p>
+                                            {% else %}
+                                                <p class="text-muted">No Size</p>
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
