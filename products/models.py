@@ -30,6 +30,7 @@ class Product(models.Model):
     sku = models.CharField(max_length=254, null=True, blank=True) # SKU stands for Stock Keeping Unit
     name = models.CharField(max_length=254)
     description = models.TextField()
+    has_sizes = models.BooleanField(default=False, null=True, blank=True) # BooleanField is a True/False field
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image_url = models.URLField(max_length=1024, null=True, blank=True) # URLField is a CharField that checks that the value is a valid URL
     image = models.ImageField(null=True, blank=True)
