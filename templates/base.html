@@ -118,7 +118,6 @@
             </div>            
         </div>
     </header>
-
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}
@@ -142,6 +141,38 @@
 
     {% block content %}
     {% endblock %}
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="float-none">
+                        <div class="ml-embedded" data-form="duebIm"></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <ul class="d-flex pagination justify-content-center social-links">
+                        <li><a target="_blank" class="social-icons" href="https://www.facebook.com/profile.php?id=100095285991760" rel="noopener"><i class="fab fa-facebook"
+                            aria-hidden="true"></i></a>
+                        </li>
+                        <li><a target="_blank" class="social-icons" href="https://www.instagram.com/" rel="noopener"><i
+                            class="fab fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a target="_blank" class="social-icons" href="https://www.twitter.com" rel="noopener"><i
+                            class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                    </ul>
+                    <div class="small text-center pb-3">
+                        <a href="#" target="_blank">Privacy Policy</a>
+                    </div>
+                    <div class="small text-center pb-3">
+                        For Educational Purposes Only
+                    </div>
+                    <div class="small text-center pb-3">
+                        Hazel's Nuts About Vintage &copy; 2023 All Rights Reserved
+                    </div>
+                </div>
+            </div>
+        </div>
+     </footer>
 
     {% block postloadjs %}
     <script type="text/javascript">
