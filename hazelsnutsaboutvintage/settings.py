@@ -80,6 +80,7 @@ TEMPLATES = [
                 'django.template.context_processors.request', # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media', # required by bag app
                 'bag.contexts.bag_contents', # required by bag app
             ],
             'builtins':[
