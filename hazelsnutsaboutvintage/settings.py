@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     'bag',
     'events',
     'checkout',
+    
+    #
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -60,6 +63,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'hazelsnutsaboutvintage.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -76,6 +81,10 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'bag.contexts.bag_contents', # required by bag app
+            ],
+            'builtins':[
+                'crispy_forms.templatetags.crispy_forms_tags', # required by crispy_forms
+                'crispy_forms.templatetags.crispy_forms_field', # required by crispy_forms
             ],
         },
     },
