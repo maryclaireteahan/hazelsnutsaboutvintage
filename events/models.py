@@ -4,8 +4,8 @@ from django.db import models
 class Event(models.Model):
     name = models.CharField(max_length=254, default='')
     description = models.TextField()
-    start_date = models.DateField()
-    end_date = models.DateField()
+    start_date = models.DateField(null=True, blank=True)
+    end_date = models.DateField(null=True, blank=True)
     time = models.TimeField()
     location = models.CharField(max_length=254, default='')
     image = models.ImageField(null=True, blank=True)
