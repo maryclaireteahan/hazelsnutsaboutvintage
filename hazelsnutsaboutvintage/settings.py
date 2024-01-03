@@ -10,8 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+from ast import Str
 from pathlib import Path
 import os
+from re import S
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -173,8 +175,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
+STRIPE_CURRENCY = 'eur'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY','pk_test_51OMXraKxtCs4iFlaWGQfH54kPhgbdQZxa7f3VBOL1mJ9uW3Bd0w0yW9jrvr5QHhIcjo9qtcxh381T8ofe90NrYtx001vmn5dXN')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY','')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
