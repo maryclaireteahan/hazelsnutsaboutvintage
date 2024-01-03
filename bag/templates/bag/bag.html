@@ -32,6 +32,7 @@
                                     <th scope="col">Price</th>
                                     <th scope="col">Qty</th>
                                     <th scope="col">Subtotal</th>
+                                    <th scope="col"></th>
                                 </tr>
                             </thead>
 
@@ -54,6 +55,13 @@
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">€{{ item.product.price }}</p>
+                                    </td>
+                                    <td class="py-3">
+                                        <p class="my-0">
+                                            <a href="{% url 'remove_from_bag' item.product.id %}" class="text-danger">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
+                                        </p>
                                     </td>
                                 </tr>
                             {% endfor %}

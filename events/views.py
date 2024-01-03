@@ -16,12 +16,12 @@ def event(request):
 
 class EventCreate(LoginRequiredMixin, View):
     """
-    View for allowing superusers to create recipes on the frontend
+    View for allowing superusers to create events on the frontend
     """
     def get(self, request):
         if request.user.is_superuser:
             form = EventForm()
-            return render(request, 'admin_recipe_create.html',
+            return render(request, 'admin_event_create.html',
                           {'event_form': form})
         else:
             return render(request, '404.html', status=404)
