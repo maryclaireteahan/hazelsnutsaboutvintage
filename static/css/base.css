@@ -172,8 +172,24 @@ a.category-badge > span.badge:hover {
 footer {
     background: #90d2d5;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-}
+    padding-top: 0;
+    margin-top: auto; /* Push the footer to the bottom */
 
+  }
+  
+  #social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+  }
+  
+  #social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #363535;
+  }
 /* -------------------------------- Media Queries */
 
 /* Media query: large or landscape phones (576px and up) -----------------------------------------------576px----------------------------------------------------------------------- */
