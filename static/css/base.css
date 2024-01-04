@@ -179,11 +179,21 @@ a.category-badge > span.badge:hover {
 }
 
 .bag-details {
-    margin-top: 15em;
+    margin-top: 10em;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
+
+.price-details {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.grand-total {
+    margin-top: 2em;
+}
+
 
 /* ------------------------------- bootstrap toasts */
 

@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'events',
     'checkout',
     
-    #
+    # Other
     'crispy_forms',
 ]
 
@@ -176,7 +176,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'eur'
-STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY','pk_test_51OMXraKxtCs4iFlaWGQfH54kPhgbdQZxa7f3VBOL1mJ9uW3Bd0w0yW9jrvr5QHhIcjo9qtcxh381T8ofe90NrYtx001vmn5dXN')
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY','')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY','')
 
 # Default primary key field type
