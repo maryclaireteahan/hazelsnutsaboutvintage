@@ -10,10 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-from ast import Str
-from pathlib import Path
 import os
-from re import S
+from unittest.mock import DEFAULT
+from pathlib import Path
+ 
+if os.path.exists("env.py"):
+    import env
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-36d-8cc+e@4(k@9)io)vsh9v=_(0&%3vl!!$!x%k6d82er7(tf'
+SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -72,23 +75,23 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR,'templates'), # required by allauth
-            os.path.join(BASE_DIR,'templates','allauth'), # required by allauth
+            os.path.join(BASE_DIR,'templates'),
+            os.path.join(BASE_DIR,'templates','allauth'),
             ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by allauth
+                'django.template.context_processors.request', 
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.media', # required by bag app
-                'bag.contexts.bag_contents', # required by bag app
+                'django.template.context_processors.media', 
+                'bag.contexts.bag_contents',
             ],
             'builtins':[
                 'crispy_forms.templatetags.crispy_forms_tags', # required by crispy_forms
                 'crispy_forms.templatetags.crispy_forms_field', # required by crispy_forms
-            ],
+            ]
         },
     },
 ]
@@ -176,7 +179,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'eur'
-STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY','')
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY','pk_test_51OMXraKxtCs4iFlaWGQfH54kPhgbdQZxa7f3VBOL1mJ9uW3Bd0w0yW9jrvr5QHhIcjo9qtcxh381T8ofe90NrYtx001vmn5dXN')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY','')
 
 # Default primary key field type

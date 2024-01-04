@@ -56,6 +56,8 @@ def checkout(request):
                         "Please call us for assistance!")
                     )
                     order.delete()
+                    print("One of the products in your bag wasn't found in our database. "
+                        "Please call us for assistance!")
                     return redirect(reverse('view_bag'))
 
             request.session['save_info'] = 'save-info' in request.POST
@@ -63,10 +65,13 @@ def checkout(request):
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information.')
+            print('There was an error with your form. \
+                Please double check your information.')
     else:
         bag = request.session.get('bag', {})
         if not bag:
             messages.error(request, "There's nothing in your bag at the moment")
+            print("There's nothing in your bag at the moment")
             return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
@@ -90,7 +95,8 @@ def checkout(request):
         'stripe_public_key': stripe_public_key,
         'client_secret': intent.client_secret,
     }
-
+    print('Stripe public key is missing. \
+            Did you forget to set it in your environment?')
     return render(request, template, context)
 
 
@@ -103,6 +109,7 @@ def checkout_success(request, order_number):
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
+    
 
     if 'bag' in request.session:
         del request.session['bag']
@@ -111,5 +118,7 @@ def checkout_success(request, order_number):
     context = {
         'order': order,
     }
-
+    print(f'Order successfully processed! \
+            Your order number is {order_number}. A confirmation \
+            email will be sent to {order.email}.')
     return render(request, template, context)
