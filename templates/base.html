@@ -78,7 +78,7 @@
                                     <a href="#" class="dropdown-item">Product Management</a>
                                     <a href="#" class="dropdown-item">Event Management</a>
                                 {% endif %}
-                                <a href="#" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                                 <a href="#" class="dropdown-item">Logout</a>
                             {% else %}
                                 <a href="#" class="dropdown-item">Register</a>
