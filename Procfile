@@ -1,1 +1,1 @@
-web: gunicorn mteahan-hazelsnutsaboutvintage.wsgi:application
+web: gunicorn hazelsnutsaboutvintage.wsgi:application
