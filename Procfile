@@ -1,0 +1,1 @@
+web: gunicorn mteahan-hazelsnutsaboutvintage.wsgi:application
