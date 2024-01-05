@@ -36,6 +36,10 @@
     border: 1px solid #000;
 }
 
+.form-control {
+    border-radius: 0px;
+}
+
 select,
 select option {
     color: #000000;
