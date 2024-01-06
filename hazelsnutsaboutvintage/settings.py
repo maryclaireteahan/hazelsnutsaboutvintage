@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False	
+DEBUG = False
 
 ALLOWED_HOSTS = ['mteahan-hazelsnutsaboutvintage-c846730bed11.herokuapp.com', 'localhost', '127.0.0.1']
 
@@ -204,7 +204,7 @@ else:
     EMAIL_HOST = 'smtp.gmail.com'
     EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER','')
     EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD','')
-
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
