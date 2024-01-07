@@ -1,10 +1,15 @@
-import time
+from email.policy import default
 from django.db import models
 from django.utils.text import slugify
+from django.contrib.auth.models import User
+
 
 
 # Create your models here.
 class Event(models.Model):
+    author = models.ForeignKey(User, on_delete=models.CASCADE,
+                               related_name='blog_posts',
+                               limit_choices_to={'is_superuser': True}, null=True, blank=True, default='')
     title = models.CharField(max_length=200, unique=True, null=True, blank=True)
     slug = models.SlugField(max_length=200, unique=True, null=True, blank=True)
     description = models.TextField()

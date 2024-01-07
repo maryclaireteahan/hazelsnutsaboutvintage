@@ -5,4 +5,5 @@ class EventForm(forms.ModelForm):
     class Meta:
         model = Event
         fields = '__all__'
+        exclude = ['slug', 'author', 'created_on']
         
