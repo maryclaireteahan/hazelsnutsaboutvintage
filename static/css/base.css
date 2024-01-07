@@ -191,20 +191,6 @@ a.category-badge > span.badge:hover {
     margin-top: 2em;
 }
 
-/* -------------------------------  events */
-
-.button-row-event {
-    background-image: radial-gradient(circle, #90d2d5, #73dbbf, #86de8f, #b9d852, #fbc70e);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    margin: 0em 1em 5em 1em;
-    padding: 3em 1.5em 1em 1.5em;
-}
-
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
@@ -387,6 +373,66 @@ footer {
     border-radius: 0;
 }
 
+/* -------------------------------- Events */
+
+.button-row-event {
+    border-radius: 25px;
+    background-image: radial-gradient(circle, #90d2d5, #73dbbf, #86de8f, #b9d852, rgba(251, 199, 14, .2));
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0em 1em 5em 1em;
+    padding: 3em 1.5em 1em 1.5em;
+}
+
+.event-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.event {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0em 1em 5em 1em;
+    padding: 3em 1.5em 1em 1.5em;
+}
+
+.event-a {
+    background-image: radial-gradient(circle, #b2dfec, #aadbf6, #add4ff, #bacbff, #d0c0ff, #e3b6f2, #f4ade0, #ffa5cb, #ffacad, #ffbe8f, #ffd77e, #def187);
+}
+
+
+.event-b {
+    background-image: radial-gradient(circle, #9bbae9, #88cbe6, #94d8d6, #b5dfc7, #dae4c3);
+}
+
+.event-c {
+    background-image: radial-gradient(circle, #d16b81, #da787d, #e1877a, #e5967a, #e7a57d, #dcb178, #ccbd7b, #bac886, #90cf9d, #64d2be, #46d0e2, #5fcafb);
+}
+
+.event-d {
+    background-image: radial-gradient(circle, #81eb6c, #b8e368, #dcdc72, #f3d587, #fdd2a0, #ffc8a0, #ffbfa2, #ffb6a6, #ff9e9c, #ff849b, #ff6aa3, #f352b2);}
+
+.edit-delete-event {
+    width: fit-content;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: fit-content;
+    margin: 1em 1em 0 1em;
+    flex-direction: column;
+  }
+
+
+
 /* -------------------------------- Media Queries */
 
 /* Media query: large or landscape phones (576px and up) -----------------------------------------------576px----------------------------------------------------------------------- */
@@ -401,6 +447,10 @@ footer {
 
     .bag-details {
         margin-top: 8em;
+    }
+
+    .event-container {
+        width: 100%;
     }
     
   }

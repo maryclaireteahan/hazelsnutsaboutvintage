@@ -1,3 +1,4 @@
+import time
 from django.db import models
 from django.utils.text import slugify
 
@@ -10,6 +11,8 @@ class Event(models.Model):
     created_on = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     start_date = models.DateField(null=True, blank=True)
     end_date = models.DateField(null=True, blank=True)
+    start_time = models.TimeField(null=True, blank=True)
+    end_time = models.TimeField(null=True, blank=True)
     location = models.CharField(max_length=254, default='')
 
     class Meta:
