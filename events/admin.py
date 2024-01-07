@@ -3,14 +3,16 @@ from .models import Event
 # Register your models here.
 
 class EventAdmin(admin.ModelAdmin):
+    prepopulated_fields = {'slug': ('title',)}
     list_display = (
-        'name',
+        'title',
         'date',
-        'time',
         'location',
-        'image',
+        'start_date',
+        'end_date',
     )
 
     ordering = ('date',)
 
 admin.site.register(Event)
+
