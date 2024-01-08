@@ -1,0 +1,46 @@
+
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+    <div class="container button-container event-container">
+        <div class="row button-row-event">
+            <div class=" col-md-6 my-auto button-col">
+                <h1 class="display-4 logo-font text-black" value="{{ event.slug }}"
+                >
+                    {{ event.title }}
+                </h1>
+                <div class="my-5">
+                    <div>
+                        <p><strong>Are you sure you want to delete this event?</strong></p>
+                    </div>
+                    <div class="col{% if s %}-12 mt-2{% endif %}">
+                        <a href="{% url 'single_event' event.slug %}" class="btn btn-outline-black rounded-0 mt-5">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">cancel</span>
+                        </a>
+                        <a href="{% url 'delete_event' slug=event.slug %}" class="red-button btn rounded-0 text-uppercase mt-5">
+                            <span class="text-uppercase">Delete Event</span>
+                        </a>                   
+                        
+
+                    </div>
+                </div>
+                <div class="my-5">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

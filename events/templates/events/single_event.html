@@ -36,7 +36,7 @@
                     {% if request.user.is_superuser %}
                         <p>
                             <a href="{% url 'edit_event' event.slug %}">Edit</a> | 
-                            {% comment %} <a class="text-danger" href="{% url 'delete_event' event.slug %}">Delete</a> {% endcomment %}
+                            <a class="text-danger" href="{% url 'delete_event' event.slug %}">Delete</a>
                         </p>
                     {% endif %}
                 </div>

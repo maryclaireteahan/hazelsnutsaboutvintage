@@ -14,7 +14,8 @@
                 <hr class="mt-1 mb-3">
             </div>
         </div>
-        {% if not on_event_page %}
+
+        {% if not on_event_page %}    
             {% if grand_total and not on_profile_page  %}
                 <p class="logo-font bg-white text-black py-1">Your Bag ({{ product_count }})</p>
                 <div class="bag-notification-wrapper">
@@ -56,5 +57,6 @@
                 </div>
             {% endif %}
         {% endif %}
+
     </div>
 </div>

@@ -1,71 +1,3 @@
-# from django.contrib.auth.mixins import LoginRequiredMixin
-# from django.views import View
-# from django.shortcuts import render, get_object_or_404, redirect
-# from .models import Event
-# from .forms import EventForm
-
-
-
-
-# # Create your views here.
-
-# class Events(View):
-#     """
-#     View for displaying all events
-#     """
-#     def get(self, request):
-#         events = Event.objects.all()
-#         context = {
-#             'events': events,
-#         }
-#         return render(request, 'events/events.html', context)
-
-
-# class EventDetail(View):
-#     """
-#     View for displaying a single event
-#     """
-#     def get(self, request, slug):
-#         event = get_object_or_404(Event, slug=slug)
-#         context = {
-#             'event': event,
-#         }
-#         return render(request, 'events/single_event.html', context)
-
-# class EventEdit(LoginRequiredMixin, View):
-#     """
-#     Edit an event
-#     """
-
-#     def get(self, request, slug):
-#         if request.user.is_superuser:
-#             event = get_object_or_404(Event, slug=slug)
-#             form = EventForm(instance=event)
-#             context = {
-#                 'event': event,
-#                 'form': form,
-#             }
-#             return render(request, 'events/edit_event.html', context)
-#         else:
-#             return render(request, '404.html', status=404)
-
-#     def post(self, request, slug, *args, **kwargs):  # Change event_slug to slug
-#         if request.user.is_superuser:
-#             event = get_object_or_404(Event, slug=slug)  # Use slug instead of event_slug
-#             form = EventForm(request.POST, instance=event)
-#             if form.is_valid():
-#                 form.save()
-#                 return redirect('events:single_event', slug=event.slug)
-#             context = {
-#                 'event': event,
-#                 'form': form,
-#             }
-#             return render(request, 'events/edit_event.html', context)
-#         else:
-#             return render(request, '404.html', status=404)
-
-
-
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -84,6 +16,7 @@ def all_events(request):
 
     context = {
         'events': events,
+        'on_event_page': True,
     }
 
     return render(request, 'events/events.html', context)
@@ -96,17 +29,32 @@ def event_detail(request, slug):
 
     context = {
         'event': event,
+        'on_event_page': True,
     }
 
     return render(request, 'events/single_event.html', context)
 
+def delete_event(request, slug):
+    """ A view to show individual event details """
+    
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('events'))
+    event = get_object_or_404(Event, slug=slug)
+
+    context = {
+        'event': event,
+        'on_event_page': True,
+    }
+
+    return render(request, 'events/delete_event.html', context)
 
 @login_required
 def add_event(request):
     """ Add a events to the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        return redirect(reverse('events'))
 
     if request.method == 'POST':
         form = EventForm(request.POST, request.FILES)
@@ -122,19 +70,19 @@ def add_event(request):
     template = 'events/add_events.html'
     context = {
         'form': form,
+        'on_event_page': True,
     }
 
     return render(request, template, context)
 
 
 @login_required
-def edit_event(request, slug):
+def event_edit(request, slug):
     """ Edit a event in the store """
-    on_event_page = True 
     
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        return redirect(reverse('events'))
 
     event = get_object_or_404(Event, slug=slug)
     if request.method == 'POST':
@@ -153,23 +101,28 @@ def edit_event(request, slug):
     context = {
         'form': form,
         'event': event,
-        'on_event_page': on_event_page,
+        'on_event_page': True,
     }
 
     return render(request, template, context)
 
 
 @login_required
-def delete_event(request, slug):
+def event_delete(request, slug):
     """ Delete a event from the store """
-    
-    on_event_page = True 
-    
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
 
     event = get_object_or_404(Event, slug=slug)
-    event.delete()
-    messages.success(request, 'event deleted!')
-    return redirect(reverse('events'))
+    if request.user.is_authenticated and request.user.is_superuser:
+        if request.method == 'POST':
+            event.delete()
+            return redirect(reverse('events'))  # Redirect to the events list after deletion
+        else:
+            return render(request, 'delete_event.html', {'event': event})
+    else:
+        return render(request, '404.html', status=404)
+
+
+
+    # event.delete()
+    # messages.success(request, 'event deleted!')
+    # return redirect(reverse('events'))
