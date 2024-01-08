@@ -188,7 +188,6 @@
                 </div>
             </div>
 
-            {% if not submitted_feedback %}
                 <div class="col-12 col-lg-6 feedback">
                     <form method="POST" action="{% url 'all_feedback' %}" class="form mb-2" enctype="multipart/form-data">
                         {% csrf_token %}
@@ -209,16 +208,14 @@
                         </div>
                     </form>
                 </div>  
-            {% else %}
 
-            <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn red-button rounded-0 my-2">
-                <span class="icon mr-2">
-                    Thank You for your feedback! Click here to get your coupon!
-                </span>
-                <span class="text-uppercase">HERE</span>
-            </a>
+                <a href="{% url 'coupon' %}" class="btn red-button rounded-0 my-2" target="_blank">
+                    <span class="icon mr-2">
+                        Thank You for your feedback! Click here to get your coupon!
+                    </span>
+                    <span class="text-uppercase">HERE</span>
+                </a>
 
-            {% endif %}
 
         </div>
         <div class="row">
