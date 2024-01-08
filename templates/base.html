@@ -143,25 +143,75 @@
     {% block content %}
     {% endblock %}
     <!--Footer-->
-    <footer>
-        <ul id="social-networks">
-            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener"
-                    aria-label="Visit my Facebook page (opens in a new tab)"><i class="fa-brands fa-facebook-f"></i></a>
-            </li>
-            <li><a href="https://www.twitter.com/" target="_blank" rel="noopener"
-                    aria-label="Visit my Twitter page (opens in a new tab)"><i class="fa-brands fa-twitter"></i></a>
-            </li>
-            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener"
-                    aria-label="Visit my Youtube page (opens in a new tab)"><i class="fa-brands fa-youtube"></i></a>
-            </li>
-            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener"
-                    aria-label="Visit my Instagram (opens in a new tab)"><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener"
-                    aria-label="Visit my LinkedIn (opens in a new tab)"><i class="fa-brands fa-linkedin-in"></i></a>
-            </li>
-        </ul>
-    </footer>
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="container my-5">
 
+    <!-- Footer -->
+  <footer class="text-center">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+
+        <!-- Instagram -->
+        <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Sign up for our newsletter</strong>
+              </p>
+            </div>
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <div class="col-md-5 col-12">
+              <!-- Email input -->
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="form5Example2" class="form-control" />
+                <label class="form-label" for="form5Example2">Email address</label>
+              </div>
+            </div>
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <div class="col-auto">
+              <!-- Submit button -->
+              <button type="submit" class="red-button btn rounded-0">
+                Subscribe
+              </button>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        FOR EDUCATIONAL PURPOSES ONLY
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+    
+  </div>
+  <!-- End of .container -->
+      <!-- End of .container -->
     {% block postloadjs %}
     <!--Fontawesome script-->
     <script src="https://kit.fontawesome.com/e225a8453d.js" crossorigin="anonymous"></script>

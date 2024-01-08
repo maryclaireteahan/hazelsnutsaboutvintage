@@ -32,7 +32,6 @@ body {
 .red-button {
     background: #c20005;
     color: white;
-    min-width: 260px;
 }
 
 .red {
@@ -278,7 +277,6 @@ a.category-badge > span.badge:hover {
 }
 
 footer {
-    position: fixed;
     bottom: 0;
     width: 100%;
     background: #90d2d5;
@@ -479,6 +477,10 @@ footer {
     .event-container {
         width: 100%;
     }
+
+    .edit-product-container {
+        padding-top: 10em;
+    }
     
   }
   
@@ -517,6 +519,10 @@ footer {
 
     .bag-details {
         margin-top: 5em;
+    }
+
+    .edit-product-container {
+        padding-top: 5em;
     }
 }
 /* Slightly larger container on xl screens */
