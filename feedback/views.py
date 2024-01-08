@@ -35,6 +35,7 @@ def all_feedback(request):
         'on_feedback_page': True,
     }
 
+
     return render(request, 'feedback/feedback.html', context)
 
 

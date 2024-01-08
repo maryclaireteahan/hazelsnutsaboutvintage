@@ -431,7 +431,24 @@ footer {
     flex-direction: column;
   }
 
+  /* -------------------------------- feedback */
 
+  .feedback-container {
+    padding-top: 15em;
+    padding-bottom: 15em;
+    display: flex;
+    flex-direction: column;
+}
+  .feedback-list-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    height: fit-content;
+    width: 90%;
+    padding: 0 0 0 1em;
+    margin-top: 1em
+}
 
 /* -------------------------------- Media Queries */
 

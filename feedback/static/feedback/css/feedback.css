@@ -1,0 +1,9 @@
+.feedback-list-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    height: fit-content;
+    width: 90%;
+    padding: 0 0 0 1em;
+}
