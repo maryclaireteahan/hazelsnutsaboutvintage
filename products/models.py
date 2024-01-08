@@ -45,13 +45,14 @@ class Product(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
+    image_url = models.URLField(max_length=1024, null=False, blank=False)
     image = CloudinaryField('image', null=True, blank=True)
     image_alt = models.CharField(max_length=254, default='image alt')
     size = models.ForeignKey('Size', null=True, blank=True, on_delete=models.SET_NULL)
     
     def __str__(self):
         return self.name
+    
     
     def save(self, *args, **kwargs):
         self.image_alt = self.name 

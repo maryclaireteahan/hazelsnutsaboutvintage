@@ -144,6 +144,10 @@ body {
     font-size: 1.5em;
 }
 
+.product-detail-container-fluid {
+    padding-bottom: 5em;
+}
+
 .product-details-container {
     padding-top: 1em;
     font-weight: 900;
@@ -156,6 +160,12 @@ body {
 
 .product-image-details {
     padding-top: 12em;
+}
+
+.edit-product-container {
+    padding-top: 15em;
+    padding-bottom: 15em;
+
 }
 
 a.category-badge > span.badge:hover {
