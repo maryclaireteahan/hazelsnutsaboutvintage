@@ -34,21 +34,6 @@ def event_detail(request, slug):
 
     return render(request, 'events/single_event.html', context)
 
-def delete_event(request, slug):
-    """ A view to show individual event details """
-    
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('events'))
-    event = get_object_or_404(Event, slug=slug)
-
-    context = {
-        'event': event,
-        'on_event_page': True,
-    }
-
-    return render(request, 'events/delete_event.html', context)
-
 @login_required
 def add_event(request):
     """ Add a events to the store """
@@ -77,7 +62,7 @@ def add_event(request):
 
 
 @login_required
-def event_edit(request, slug):
+def edit_event(request, slug):
     """ Edit a event in the store """
     
     if not request.user.is_superuser:
@@ -108,21 +93,17 @@ def event_edit(request, slug):
 
 
 @login_required
-def event_delete(request, slug):
-    """ Delete a event from the store """
-
+def delete_event(request, slug):
+    """ A view to show individual event details """
+    
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('events'))
     event = get_object_or_404(Event, slug=slug)
-    if request.user.is_authenticated and request.user.is_superuser:
-        if request.method == 'POST':
-            event.delete()
-            return redirect(reverse('events'))  # Redirect to the events list after deletion
-        else:
-            return render(request, 'delete_event.html', {'event': event})
-    else:
-        return render(request, '404.html', status=404)
 
+    context = {
+        'event': event,
+        'on_event_page': True,
+    }
 
-
-    # event.delete()
-    # messages.success(request, 'event deleted!')
-    # return redirect(reverse('events'))
+    return render(request, 'events/event_delete.html', context)

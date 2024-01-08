@@ -25,15 +25,19 @@
                         <p><strong>Are you sure you want to delete this event?</strong></p>
                     </div>
                     <div class="col{% if s %}-12 mt-2{% endif %}">
-                        <a href="{% url 'single_event' event.slug %}" class="btn btn-outline-black rounded-0 mt-5">
-                            <span class="icon">
-                                <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="text-uppercase">cancel</span>
-                        </a>
-                        <a href="{% url 'delete_event' slug=event.slug %}" class="red-button btn rounded-0 text-uppercase mt-5">
-                            <span class="text-uppercase">Delete Event</span>
-                        </a>                   
+                 
+                        
+
+                        <form method="post" action="{% url 'delete_event' slug=event.slug %}">
+                            {% csrf_token %}
+                            <a href="{% url 'single_event' event.slug %}" class="btn btn-outline-black rounded-0 mt-5">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">cancel</span>
+                            </a>
+                            <input type="submit" value="Delete" class="red-button btn rounded-0 text-uppercase mt-5">
+                        </form>
                         
 
                     </div>
