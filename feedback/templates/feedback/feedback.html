@@ -21,8 +21,9 @@
         <div class="container button-container feedback-list-container table-container">
             <div class="row feedback">
                 <div class="col-7 col-md-6 my-auto button-col">
-                    <div class="my-5">
+                    <div class="my-5 feedback-card">
                         <span class="text-uppercase">Subject:</span>
+                        <br>
                         <a href="{% url 'feedback_detail' f.id %}" class="rounded-0 mt-5">
                             <span class="text-uppercase">{{ f.subject }}</span>
                             <span class="icon">

@@ -185,7 +185,7 @@ a.category-badge > span.badge:hover {
 }
 
 .bag-details {
-    margin-top: 10em;
+    margin-top: 15em;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -441,6 +441,21 @@ footer {
 
   /* -------------------------------- feedback */
 
+  .feedback {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+
+  .feedback div {
+    max-width: 100%;
+    align-items: flex-start;
+
+
+  }
+
   .feedback-container {
     padding-top: 15em;
     padding-bottom: 15em;
@@ -457,6 +472,28 @@ footer {
     padding: 0 0 0 1em;
     margin-top: 1em
 }
+
+.feedback-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.feedback-card a {
+    color: black;
+}
+
+.feedback .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback .form-group textarea {
+    width: 100%;
+}
+
 
 /* -------------------------------- Media Queries */
 
