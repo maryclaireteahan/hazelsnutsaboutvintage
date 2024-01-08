@@ -26,7 +26,7 @@
         </div>
 
         <div class="row">
-            <div class="col-12 col-lg-7">
+            <div class="col-12 col-lg-6">
                 <div class="order-confirmation-wrapper p-2 border">
                     <div class="row">
                         <div class="col">
@@ -42,7 +42,6 @@
                             <p class="mb-0">{{ order.order_number }}</p>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Order Date</p>
@@ -189,6 +188,22 @@
                     </div>
                 </div>
             </div>
+            <div class="col-12 col-lg-6 text-right feedback">
+                <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        {% if field.name != 'image' %}
+                            {{ field | as_crispy_field }}
+                        {% else %}
+                            {{ field }}
+                        {% endif %}
+                    {% endfor %}
+                    <div class="text-right">
+                        <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
+                        <button class="btn btn-black rounded-0" type="submit">Add Product</button>
+                    </div>
+                </form>
+            </div>   
         </div>
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
@@ -207,7 +222,7 @@
                         <span class="text-uppercase">Now check out the latest deals!</span>
                     </a>
                 {% endif %}
-			</div>
+			</div>    
 		</div>
     </div>
 {% endblock %}

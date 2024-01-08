@@ -1,3 +1,11 @@
 from django.contrib import admin
 
-# Register your models here.
+
+class FeedbackAdmin(admin.ModelAdmin):
+    list_display = (
+        'subject',
+        'message',
+        'date',
+    )
+
+    ordering = ('-date',)
