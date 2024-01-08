@@ -1,7 +1,7 @@
 import uuid
 from django.shortcuts import render, redirect, reverse
 from django.http import HttpResponse
-from .models import Coupon
+from .models import Coupon, CouponCode, CouponBarcode
 from .utils import generate_barcode_image
 
 

@@ -53,6 +53,7 @@ class Order(models.Model):
     def __str__(self):
         return self.order_number
     
+    
 class OrderLineItem(models.Model):
     """ A model for line items in customer orders """
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
