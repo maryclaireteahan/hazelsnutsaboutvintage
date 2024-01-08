@@ -10,6 +10,8 @@ from products.models import Product
 from bag.contexts import bag_contents
 from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
+from feedback.forms import FeedbackForm  # Import the FeedbackForm from the feedback app
+
 
 import stripe
 import json
@@ -178,9 +180,23 @@ def checkout_success(request, order_number):
     if 'bag' in request.session:
         del request.session['bag']
 
+    if request.method == 'POST':
+        feedback_form = FeedbackForm(request.POST)
+        if feedback_form.is_valid():
+            feedback = feedback_form.save()
+            messages.success(request, 'Successfully added feedback!')
+            return redirect(reverse('home', args=[feedback.id]))
+        else:
+            messages.error(request, 'Failed to add feedback. Please ensure the form is valid.')
+    else:
+        feedback_form = FeedbackForm()
+        
+            
+    feedback_form = FeedbackForm()  # Create an instance of the FeedbackForm
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
+        'feedback_form': feedback_form,  # Add the feedback_form to the context dictionary
     }
 
     return render(request, template, context)

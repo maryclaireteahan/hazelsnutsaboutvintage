@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'feedback/css/feedback.css' %}">
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -9,30 +13,43 @@
     </div>
 {% endblock %}
 
+
+
+
+
+
 {% block content %}
-    <div class="container button-container">
-        <div class="row button-row">
-            <div class="col-7 col-md-6 my-auto button-col">
-                <div class="row">
-                    <div class="col">
-                        <hr>
-                        <h2 class="logo-font mb-4">Feedback</h2>
-                        <hr>
+    <div class="container button-container feedback-container">
+        {% for f in feedback %}
+            <div class="row feedback">
+                <div class="col-7 col-md-6 my-auto button-col">
+                    <h1 class="display-4 logo-font text-black" >
+                        <strong>{{ f.subject }}</strong>
+                    </h1>
+                    <div class="my-5">
+                        <h4>
+                            <a href="{% url 'feedback_detail' f.id %}"  class="red-button btn btn-lg rounded-0 text-uppercase py-3">Find Out More</a>
+                        </h4>
                     </div>
                 </div>
-        
-                <form method="POST">
-                    {% csrf_token %}
-                    
-                    <label for="subject">Subject:</label>
-                    <input type="text" id="subject" name="subject" required>
-                    
-                    <label for="details">Details:</label>
-                    <textarea id="details" name="details" required></textarea>
-                    
-                    <button type="submit">Submit</button>
-                </form>
             </div>
-        </div>
+        {% endfor %}
     </div>
+
+    <div class="container header-container">
+        {% if is_paginated %}
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+    
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+    </div>
+
 {% endblock %}

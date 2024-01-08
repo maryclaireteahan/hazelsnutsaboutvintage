@@ -1,5 +1,5 @@
 from django.contrib import admin
-
+from .models import Feedback
 
 class FeedbackAdmin(admin.ModelAdmin):
     list_display = (
@@ -9,3 +9,5 @@ class FeedbackAdmin(admin.ModelAdmin):
     )
 
     ordering = ('-date',)
+    
+admin.site.register(Feedback)

@@ -27,4 +27,5 @@ urlpatterns = [
     path('events/', include('events.urls')),
     path('checkout/', include('checkout.urls')),
     path('profiles/', include('profiles.urls')),
+    path('feedback/', include('feedback.urls')),  # Include URLs for Feedback app
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
