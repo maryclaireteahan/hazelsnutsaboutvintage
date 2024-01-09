@@ -35,4 +35,4 @@ class Event(models.Model):
     def save(self, *args, **kwargs):
         if not self.slug:  # Generate slug only if it doesn't exist
             self.slug = slugify(self.title)
-        super().save(*args, **kwargs)
+            super().save(*args, **kwargs)

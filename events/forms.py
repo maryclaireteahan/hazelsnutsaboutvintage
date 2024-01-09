@@ -5,5 +5,9 @@ class EventForm(forms.ModelForm):
     class Meta:
         model = Event
         fields = '__all__'
-        exclude = ['slug', 'author', 'created_on']
+        readonly = ['slug']
+        exclude = ['author', 'created_on']
         
+    def __init__(self, *args, **kwargs):
+        super(EventForm, self).__init__(*args, **kwargs)
+        self.fields['slug'].widget.attrs['readonly'] = True

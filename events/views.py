@@ -46,13 +46,13 @@ def add_event(request):
         if form.is_valid():
             event = form.save()
             messages.success(request, 'Successfully added event!')
-            return redirect(reverse('event_detail', args=[event.slug]))
+            return redirect(reverse('single_event', args=[event.slug]))
         else:
             messages.error(request, 'Failed to add event. Please ensure the form is valid.')
     else:
         form = EventForm()
         
-    template = 'events/add_events.html'
+    template = 'events/add_event.html'
     context = {
         'form': form,
         'on_event_page': True,
