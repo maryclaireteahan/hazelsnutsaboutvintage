@@ -15,17 +15,20 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container">
+    <div class="container bag-details">
         <div class="row">
             <div class="col">
                 <hr>
                 <h2 class="logo-font mb-4">Thank You</h2>
                 <hr>
-                <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
             </div>
         </div>
       <div class="row">
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-6 table-container">
+                <div class="col">
+                    <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+                </div>
+                <hr>
                 <div class="order-confirmation-wrapper p-2 border">
                     <div class="row">
                         <div class="col">
@@ -33,7 +36,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row order-number-container">
                         <div class="col-12 col-md-4">
                             <p class="mb-0 text-black font-weight-bold">Order Number</p>
                         </div>
@@ -187,8 +190,10 @@
                     </div>
                 </div>
             </div>
-
                 <div class="col-12 col-lg-6 feedback">
+                    <hr>
+                    <h2 class="logo-font mb-4">Feedback</h2>
+                    <hr>
                     <form method="POST" action="{% url 'all_feedback' %}" class="form mb-2" enctype="multipart/form-data">
                         {% csrf_token %}
                         {% for field in feedback_form %}
@@ -207,18 +212,18 @@
                             <button class="btn red-button rounded-0" type="submit">Add Feedback</button>
                         </div>
                     </form>
+                    <div class="col">
+                        <a href="{% url 'coupon' %}" class="coupon-button btn red-button rounded-0 my-2" target="_blank">
+                            <p class="icon mr-2">
+                                Click here to get your coupon!
+                            </p>
+                        </a>
+                    </div>
                 </div>  
-
-                <a href="{% url 'coupon' %}" class="coupon-button btn red-button rounded-0 my-2" target="_blank">
-                    <span class="icon mr-2">
-                        Thank You for your feedback! Click here to get your coupon!
-                    </span>
-                    <span class="text-uppercase">HERE</span>
-                </a>
 
 
         </div>
-        <div class="row">
+        <div class="row deals-button">
 			<div class="col-12 col-lg-7">
                 {% if from_profile %}
                     <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">

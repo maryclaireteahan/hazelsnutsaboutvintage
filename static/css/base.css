@@ -503,8 +503,18 @@ footer {
 .coupon-container {
     height: auto;
     width: 100%;
-    /* margin-left: 1em; */
-    /* margin-right: 1em; */
+}
+
+.coupon-button {
+    width: 100%;
+    height: 100%;
+    background: #117a8b;
+}
+
+
+.deals-button {
+    margin-top: 1em;
+
 }
 /* -------------------------------- Media Queries */
 
@@ -571,6 +581,10 @@ footer {
 
     .edit-product-container {
         padding-top: 5em;
+    }
+
+    .order-number-container {
+        flex-direction: column;
     }
 }
 /* Slightly larger container on xl screens */
