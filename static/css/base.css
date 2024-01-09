@@ -223,6 +223,8 @@ a.category-badge > span.badge:hover {
     padding: 1em;
     margin-bottom: 1em;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    width: 320px;
+
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
@@ -505,16 +507,35 @@ footer {
     width: 100%;
 }
 
+
+
+.coupon-button-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .coupon-button {
     width: 100%;
-    height: 100%;
     background: #117a8b;
 }
 
+.coupon-button .icon {
+    height: auto;
+    width: auto;
+}
 
 .deals-button {
     margin-top: 1em;
+}
 
+.display-4 {
+    font-size: 1.5em;
+}
+
+.order-number-font-size {
+    font-size: .75em;
 }
 /* -------------------------------- Media Queries */
 
@@ -586,6 +607,14 @@ footer {
     .order-number-container {
         flex-direction: column;
     }
+
+    .coupon-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40%;
+    }
+    
 }
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
