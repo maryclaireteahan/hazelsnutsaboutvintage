@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Dissalow: /bag/
+Sitemap: https://mteahan-hazelsnutsaboutvintage-c846730bed11.herokuapp.com/?/sitemap.xml
