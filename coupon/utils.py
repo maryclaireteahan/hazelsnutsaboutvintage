@@ -17,13 +17,13 @@ def generate_barcode_image(code):
     barcode_instance.save(filepath)
     return filepath
 
-def generate_coupon_code(order_number):
+def generate_coupon_code():
     """ Generate a random coupon code using secrets and order number """
     # Define the length of the random part
     length = 8
     # Create the random part
     random_part = secrets.token_hex(length)
     # Append the order number
-    coupon_code = random_part + str(order_number)
+    coupon_code = random_part
     # Return the coupon code
     return coupon_code

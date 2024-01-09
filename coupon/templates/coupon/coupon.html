@@ -45,8 +45,8 @@
     </div>
 {% endblock %}
 {% block content %}
-    <div class="container button-container">
-        <div class="row button-row">
+    <div class="container button-container coupon-container">
+        <div class="row button-row coupon">
             {% for coupon in coupons %}
                 <div class="col-7 col-md-6 my-auto button-col">
                     <h1 class=" logo-font text-black">
@@ -59,9 +59,20 @@
                         <p>
                             Start Date: {{ coupon.created_on }}
                         </p>
-                    </div>
+
+                    </div> 
+                    <p>
+                        Code: {{ coupon.code }}
+                    </p>
                 </div>
             {% endfor %}
+            {% for order in orders %}
+            <div class="col-7 col-md-6 my-auto button-col">
+                <p>
+                    Code: {{ order.order_number }}
+                </p>
+            </div>
+        {% endfor %}
         </div>
     </div>
 {% endblock %}

@@ -1,0 +1,8 @@
+.coupon div{
+    max-width: fit-content;
+}
+
+.coupon-container {
+    height: auto;
+    width: 100%;
+}
