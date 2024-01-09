@@ -130,6 +130,12 @@ body {
     align-content: center;
 }
 
+.add-product-container {
+    margin-top: 15em;
+    margin-bottom: 5em;
+  }
+
+
 .product-row{
     margin-bottom: 1em;
 }
@@ -303,6 +309,10 @@ footer {
 
     /* Allauth form formatting */
 
+.allauth-container {
+    margin-top: 15em;
+}
+
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: #6c757d; /* text-secondary */
@@ -333,8 +343,6 @@ footer {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #000;
-    border: 1px solid #000;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -346,9 +354,7 @@ footer {
 
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
-	color: #fff;
-    background-color: #222;
-    border-color: #222;
+	color: #000;
 }
 
 .allauth-form-inner-content a {
@@ -403,6 +409,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    margin-bottom: 10em;
 }
 .event {
     width: 100%;
@@ -413,6 +420,7 @@ footer {
     align-items: center;
     margin: 0em 1em 5em 1em;
     padding: 3em 1.5em 1em 1.5em;
+    box-shadow: 0px 12px 10px 5px rgba(0,0,0,0.75);
 }
 
 .event-a {
@@ -439,6 +447,22 @@ footer {
     height: fit-content;
     margin: 1em 1em 0 1em;
     flex-direction: column;
+  }
+
+  .add-event-container {
+    margin-top: 15em;
+    margin-bottom: 5em;
+  }
+
+  .edit-event-container {
+    margin-top: 15em;
+    margin-bottom: 5em;
+  }
+
+  .delete-event-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 
   /* -------------------------------- feedback */
@@ -537,6 +561,9 @@ footer {
 .order-number-font-size {
     font-size: .75em;
 }
+
+
+
 /* -------------------------------- Media Queries */
 
 /* Media query: large or landscape phones (576px and up) -----------------------------------------------576px----------------------------------------------------------------------- */
@@ -560,7 +587,18 @@ footer {
     .edit-product-container {
         padding-top: 10em;
     }
+
+    .edit-event-container {
+        margin-top: 10em;
+    }
+
+    .add-event-container {
+        margin-top: 10em;
+    }
     
+    .add-product-container {
+        margin-top: 10em;
+    }
   }
   
   /* Media query: tablets and larger (768px and up) ------------------------------------------------------768px----------------------------------------------------------------------- */
@@ -614,7 +652,23 @@ footer {
         align-items: center;
         height: 40%;
     }
-    
+
+    .edit-event-container {
+        margin-top: 5em;
+    }
+
+    .add-event-container {
+        margin-top: 5em;
+    }
+
+    .add-product-container {
+        margin-top: 5em;
+    }
+
+    .allauth-container {
+        margin-top: 10em;
+    }
+
 }
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
