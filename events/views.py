@@ -22,7 +22,7 @@ def all_events(request):
     return render(request, 'events/events.html', context)
 
 
-def event_detail(request, slug):
+def single_event(request, slug):
     """ A view to show individual event details """
 
     event = get_object_or_404(Event, slug=slug)
@@ -95,15 +95,22 @@ def edit_event(request, slug):
 @login_required
 def delete_event(request, slug):
     """ A view to show individual event details """
-    
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('events'))
+
     event = get_object_or_404(Event, slug=slug)
+    if request.user.is_superuser:
+        if request.method == 'POST':
+            event.delete()
+            messages.success(request, 'Successfully deleted event!')
+            return redirect(reverse('events'))  # Redirect to the events page
+        else:
+            return render(request, 'events/delete_event.html',
+                          {'event': event})
 
-    context = {
-        'event': event,
-        'on_event_page': True,
-    }
+    
+    else:
+        return render(request, '404.html', status=404)
 
-    return render(request, 'events/event_delete.html', context)
+
