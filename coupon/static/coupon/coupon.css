@@ -1,8 +1,26 @@
-.coupon div{
+.coupon div {
     max-width: fit-content;
-}
-
-.coupon-container {
+  }
+  
+  .coupon-container {
     height: auto;
     width: 100%;
-}
+  }
+  
+  .coupon-button-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .coupon-button {
+    width: 100%;
+    background: #117a8b;
+  }
+  
+  .coupon-button .icon {
+    height: auto;
+    width: auto;
+  }
+  

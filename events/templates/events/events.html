@@ -7,7 +7,7 @@
   </div>
 </div>
 {% endblock %} {% block content %}
-<div class="container button-container event-container">
+<div class="container-fluid button-container event-container">
   {% for event in events %}
   <div class="row event {% cycle 'event-a' 'event-b' 'event-c' 'event-d' %}">
     <div class="col-7 col-md-6 my-auto button-col">
@@ -19,37 +19,11 @@
           <a
             href="{% url 'single_event' event.slug %}"
             value="{{ event.slug }}"
-            class="red-button btn btn-lg rounded-0 text-uppercase py-3"
-            >Find Out More</a
-          >
+            class="red-button btn btn-lg rounded-0 text-uppercase py-3">Find Out More</a>
         </h4>
       </div>
     </div>
   </div>
   {% endfor %}
 </div>
-
-<div class="container header-container">
-  {% if is_paginated %}
-  <nav aria-label="Page navigation">
-    <ul class="pagination justify-content-center">
-      {% if page_obj.has_previous %}
-      <li>
-        <a href="?page={{ page_obj.previous_page_number }}" class="page-link"
-          >&laquo; PREV
-        </a>
-      </li>
-      {% endif %} {% if page_obj.has_next %}
-      <li>
-        <a href="?page={{ page_obj.next_page_number }}" class="page-link">
-          NEXT &raquo;</a
-        >
-      </li>
-
-      {% endif %}
-    </ul>
-  </nav>
-  {% endif %}
-</div>
-
 {% endblock %}
