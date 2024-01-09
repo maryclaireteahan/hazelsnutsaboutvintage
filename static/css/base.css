@@ -563,6 +563,11 @@ footer {
 }
 
 
+.profile-container {
+    margin-top: 15em;
+    margin-bottom: 5em;
+  }
+
 
 /* -------------------------------- Media Queries */
 
@@ -597,6 +602,10 @@ footer {
     }
     
     .add-product-container {
+        margin-top: 10em;
+    }
+    
+    .profile-container {
         margin-top: 10em;
     }
   }

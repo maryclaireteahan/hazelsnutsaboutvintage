@@ -6,13 +6,12 @@ class EventAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     list_display = (
         'title',
-        'date',
         'location',
         'start_date',
         'end_date',
     )
 
-    ordering = ('date',)
+    ordering = ('-created_on',)
 
-admin.site.register(Event)
+admin.site.register(Event, EventAdmin)
 

@@ -190,6 +190,18 @@
                     </div>
                 </div>
             </div>
+            {% if from_profile %}
+                <div class="row deals-button">
+                    <div class="col-12 col-lg-7">
+                        <a href="{% url 'profile' %}" class="btn red-button rounded-0 my-2">
+                            <span class="icon mr-2">
+                                <i class="fas fa-angle-left"></i>
+                            </span>
+                            <span class="text-uppercase">Back to Profile</span>
+                        </a>
+                    </div>    
+                </div>
+            {% else %}
                 <div class="col-12 col-lg-6 feedback">
                     <hr>
                     <h2 class="logo-font mb-4"><strong>Feedback</strong></h2>
@@ -212,7 +224,7 @@
                             <button class="btn red-button rounded-0" type="submit">Add Feedback</button>
                         </div>
                     </form>
-                    <div class="col coupon-button-container">
+                    <div class="col">
                         <a href="{% url 'coupon' %}" class="coupon-button btn red-button rounded-0 my-2" target="_blank">
                             <p class="icon mr-2">
                                 Click here to get your coupon!
@@ -220,27 +232,19 @@
                         </a>
                     </div>
                 </div>  
-
-
         </div>
         <div class="row deals-button">
 			<div class="col-12 col-lg-7">
-                {% if from_profile %}
-                    <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
-                        <span class="icon mr-2">
-                            <i class="fas fa-angle-left"></i>
-                        </span>
-                        <span class="text-uppercase">Back to Profile</span>
-                    </a>
-                {% else %}
-                    <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn red-button rounded-0 my-2">
-                        <span class="icon mr-2">
-                            <i class="fas fa-gifts"></i>
-                        </span>
-                        <span class="text-uppercase">Now check out the latest deals!</span>
-                    </a>
-                {% endif %}
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn red-button rounded-0 my-2">
+                    <span class="icon mr-2">
+                        <i class="fas fa-gifts"></i>
+                    </span>
+                    <span class="text-uppercase">Now check out the latest deals!</span>
+                </a>
 			</div>    
 		</div>
     </div>
+            {% endif %}
+
 {% endblock %}
+
