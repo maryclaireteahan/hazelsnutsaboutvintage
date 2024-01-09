@@ -1,5 +1,7 @@
 import barcode
 from barcode.writer import ImageWriter
+import secrets
+
 import os
 
 def generate_barcode_image(code):
@@ -14,3 +16,14 @@ def generate_barcode_image(code):
     # Save the barcode image
     barcode_instance.save(filepath)
     return filepath
+
+def generate_coupon_code(order_number):
+    """ Generate a random coupon code using secrets and order number """
+    # Define the length of the random part
+    length = 8
+    # Create the random part
+    random_part = secrets.token_hex(length)
+    # Append the order number
+    coupon_code = random_part + str(order_number)
+    # Return the coupon code
+    return coupon_code
