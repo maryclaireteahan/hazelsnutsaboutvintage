@@ -3,7 +3,6 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
-from coupon.utils import generate_coupon_code
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
@@ -191,15 +190,12 @@ def checkout_success(request, order_number):
             messages.error(request, 'Failed to add feedback. Please ensure the form is valid.')
     else:
         feedback_form = FeedbackForm()
-        
-    coupon_code = generate_coupon_code(order_number)
-    coupon_url = reverse("coupon", args=[coupon_code])        
+               
     feedback_form = FeedbackForm()  # Create an instance of the FeedbackForm
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
         'feedback_form': feedback_form,
-        "coupon_url": coupon_url,
     }
 
     return render(request, "checkout/checkout_success.html", context)

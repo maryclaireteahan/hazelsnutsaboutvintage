@@ -47,23 +47,21 @@
 {% block content %}
     <div class="container button-container">
         <div class="row button-row">
-                    <div class="col-7 col-md-6 my-auto button-col">
-                        <h1 class=" logo-font text-black">
-                            10% off your next purchase!
-                        </h1>
-                        <div class="my-5">
-                            <p class="lead text-black">
-                                {{ coupon.description }}
-                            </p>
-                            <p>
-                                Start Date: {{ coupon.created_on }}
-                            </p>
-                            <p>
-                                <img src="{{ coupon.barcode_image.url }}" alt="Barcode">
-                                {{ coupon.code }}
-                            </p>
-                        </div>
+            {% for coupon in coupons %}
+                <div class="col-7 col-md-6 my-auto button-col">
+                    <h1 class=" logo-font text-black">
+                        10% off your next purchase!
+                    </h1>
+                    <div class="my-5">
+                        <p class="lead text-black">
+                            {{ coupon.description }}
+                        </p>
+                        <p>
+                            Start Date: {{ coupon.created_on }}
+                        </p>
                     </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

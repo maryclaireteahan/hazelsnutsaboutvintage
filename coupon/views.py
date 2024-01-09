@@ -1,14 +1,11 @@
-import secrets
-from django.views.decorators.cache import cache_control
-from django.shortcuts import render, redirect, reverse
-from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404
+from django.contrib import messages
 from .models import Coupon
-from .utils import generate_barcode_image
 
-from django.shortcuts import get_object_or_404
-
-def coupon(request, coupon_code):
+def coupon(request):
     """ A view to return the coupon page """
-    coupon = get_object_or_404(Coupon, code=coupon_code)
-    return render(request, 'coupon/coupon.html', {'coupon': coupon})
-
+    coupons = Coupon.objects.all()  
+    context = {
+        'coupons': coupons  
+    }
+    return render(request, 'coupon/coupon.html', context)

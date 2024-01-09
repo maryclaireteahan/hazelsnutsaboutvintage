@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 
+
 urlpatterns = [
-    path('coupon/<str:coupon_code>/', views.coupon, name='coupon'),
+    path('', views.coupon, name='coupon'),
 ]
