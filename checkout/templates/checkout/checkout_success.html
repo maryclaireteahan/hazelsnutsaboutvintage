@@ -212,7 +212,7 @@
       <form
         method="POST"
         action="{% url 'all_feedback' %}"
-        class="form mb-2"
+        class="form mb-2 feedback-form"
         enctype="multipart/form-data"
       >
         {% csrf_token %} {% for field in feedback_form %}
@@ -230,7 +230,7 @@
           </button>
         </div>
       </form>
-      <div class="col">
+      <div class="col coupon-column">
         <a
           href="{% url 'coupon' %}"
           class="coupon-button btn red-button rounded-0 my-2"

@@ -69,7 +69,6 @@ html {
   
   .button-container {
     height: 70%;
-    border-radius: 10px;
     margin-top: 15em;
     display: flex;
     justify-content: center;
@@ -222,7 +221,7 @@ html {
   
   .table-container {
     background: wheat;
-    font-size: 1.25em;
+    font-size: .5em;
     padding: 1em;
     margin-bottom: 1em;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
@@ -499,7 +498,18 @@ html {
     margin: 0;
     height: 100%;
   }
-    
+  .coupon-column {
+    box-shadow: 0px 0px 10px 5px black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center !important;
+    background: wheat;
+  }
+
+  .feedback-form {
+    padding-bottom: 1em;
+  }
   
   /* -------------------------------- Events */
   
@@ -654,7 +664,9 @@ html {
     padding-bottom: 15em;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
+
   .feedback-list-container {
     display: flex;
     align-items: flex-start;
@@ -756,6 +768,14 @@ html {
     .profile-container {
       margin-top: 10em;
     }
+
+    .feedback-container {
+      padding-top: 10em;
+    }
+
+    .table-container {
+      font-size: 1em;
+  }
   }
   
 /* Media query: tablets and larger (768px and up) ------------------------------------------------------768px----------------------------------------------------------------------- */
@@ -766,7 +786,7 @@ html {
   }
   
   /* fixed top navbar only on medium and up */
-  @media (min-width: 992px) {
+@media (min-width: 992px) {
     .fixed-top-desktop-only {
       position: fixed;
       top: 0;
@@ -825,11 +845,18 @@ html {
     .allauth-container {
       margin-top: 10em;
     }
-  }
+
+    .feedback-container {
+      padding-top: 5em;
+    }
+
   /* Slightly larger container on xl screens */
-  @media (min-width: 1200px) {
+@media (min-width: 1200px) {
     .container {
       max-width: 80%;
     }
+
+    .table-container {
+      font-size: 1.5em;
+    }
   }
-  
