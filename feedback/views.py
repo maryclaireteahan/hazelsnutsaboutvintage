@@ -15,6 +15,7 @@ def feedback(request):
     return render(request, 'feedback/feedback.html', context)
 
 def all_feedback(request):
+    """ A view to show all feedback """
     if request.method == 'POST':
         feedback_form = FeedbackForm(request.POST)
         if feedback_form.is_valid():

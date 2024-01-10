@@ -111,8 +111,6 @@ def delete_event(request, slug):
         else:
             return render(request, 'events/delete_event.html',
                           {'event': event})
-
-    
     else:
         return render(request, '404.html', status=404)
 

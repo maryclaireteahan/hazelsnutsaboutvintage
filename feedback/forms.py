@@ -2,6 +2,7 @@ from .models import Feedback
 from django import forms
 
 class FeedbackForm(forms.ModelForm):
+    """ Form for adding feedback """
     class Meta:
         model = Feedback
         fields = ('subject', 'message')

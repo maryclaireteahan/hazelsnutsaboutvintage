@@ -3,6 +3,7 @@ from .models import Product, Category, Brand, Size
 # Register your models here.
 
 class ProductAdmin(admin.ModelAdmin):
+    """ Admin view for products """
     list_display = (
         'sku',
         'name',
@@ -20,18 +21,21 @@ class ProductAdmin(admin.ModelAdmin):
         return ", ".join([c.name for c in obj.categories.all()])
 
 class CategoryAdmin(admin.ModelAdmin):
+    """ Admin view for categories """
     list_display = (
         'friendly_name',
         'name',
     )
 
 class BrandAdmin(admin.ModelAdmin):
+    """ Admin view for brands """
     list_display = (
         'friendly_name',
         'name',
     )
 
 class SizeAdmin(admin.ModelAdmin):
+    """ Admin view for sizes """
     list_display = (
         'friendly_name',
         'name',

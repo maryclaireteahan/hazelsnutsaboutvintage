@@ -4,6 +4,7 @@ from .models import Order
 
 class OrderForm(forms.ModelForm):
     class Meta:
+        """ Meta class to specify model and fields to render """
         model = Order
         fields = ('full_name', 'email', 'phone_number', 'country', 'town_or_city', 'street_address1', 'street_address2', 'postcode', 'county',)
         

@@ -37,5 +37,8 @@ class Event(models.Model):
         return self.title
     
     def save(self, *args, **kwargs):
+        """ 
+        Overrides the original save method to set the slug
+        """
         self.slug = slugify(self.title)
         super(Event, self).save(*args, **kwargs)

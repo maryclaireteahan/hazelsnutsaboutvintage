@@ -1,9 +1,8 @@
-# Register your models here.
 from django.contrib import admin
 from .models import Event
-# Register your models here.
 
 class EventAdmin(admin.ModelAdmin):
+    """ Admin view for events """
     prepopulated_fields = {'slug': ('title',)}
     list_display = (
         'creator',
@@ -18,8 +17,6 @@ class EventAdmin(admin.ModelAdmin):
     
     def get_queryset(self, request):
         qs = super().get_queryset(request)
-        # Print the SQL query for debugging (optional)
-        print(qs.query)
         return qs
 
 admin.site.register(Event, EventAdmin)
