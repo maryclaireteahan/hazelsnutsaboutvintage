@@ -1,12 +1,13 @@
 {% load static %}
 
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
 
     {% block meta %}
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% endblock %}
 
@@ -16,14 +17,20 @@
     {% endblock %}
 
     <!--Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon/apple-touch-icon.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon/favicon-32x32.png' %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon/favicon-16x16.png' %}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicon/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon/favicon-16x16.png' %}">
 
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <style>
+            .custom-background {
+              background: url('{% static 'images/hazelsnutsaboutvintagehero.jpg' %}') no-repeat center center fixed;
+              background-size: cover;
+            }
+        </style>
     {% endblock %}
 
     {% block extra_css %}
@@ -43,7 +50,7 @@
 
     <title>Hazel's Nuts about Vintage!{% block extra_title %}{% endblock %}</title>
   </head>
-  <body style="background: url('{% static 'images/hazelsnutsaboutvintagehero.jpg' %}') no-repeat center center fixed; background-size: cover;">
+  <body class="custom-background">
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -68,13 +75,13 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link" href="#" id="user-options-base" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options-base">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
@@ -152,17 +159,15 @@
       <!-- Section: Social media -->
       <section class="mb-4">
         <!-- Facebook -->
-        <a class="btn btn-outline-dark btn-floating m-1" href="https://www.facebook.com/Hazelsnutsaboutvintage/" role="button" target="_blank"
-          ><i class="fab fa-facebook-f"></i
-        ></a>
+        <a class="btn btn-outline-dark btn-floating m-1" href="https://www.facebook.com/Hazelsnutsaboutvintage/" role="button" target="_blank">
+            <i class="fab fa-facebook-f"></i></a>
 
         <!-- Instagram -->
-        <a class="btn btn-outline-dark btn-floating m-1" href="https://www.instagram.com/hazelsnutsaboutvintage/?hl=en" role="button" target="_blank"
-          ><i class="fab fa-instagram"></i
-        ></a>
-
+        <a class="btn btn-outline-dark btn-floating m-1" href="https://www.instagram.com/hazelsnutsaboutvintage/?hl=en" role="button" target="_blank">
+          <i class="fab fa-instagram"></i></a>
+      </section>
       <!-- Section: Form -->
-      <section class="">
+      <section>
         <form action="https://herokuapp.us11.list-manage.com/subscribe/post?u=d657aede016675f9b725a10ef&amp;id=f002b36538&amp;f_id=00c2a7e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">
             <!--Grid row-->
           <div class="row d-flex justify-content-center">
@@ -179,14 +184,7 @@
               <!-- Email input -->
               <label class="form-label" for="mce-EMAIL">Email address <span class="asterisk text-danger">*</span></label>
               <div class="form-outline form-white mb-4">
-                <input     type="email" 
-                name="EMAIL" 
-                id="mce-EMAIL" 
-                class="form-control required email" 
-                required="yes" 
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                title="Please enter a valid email address"
-                value="" />
+                <input type="email" name="EMAIL" id="mce-EMAIL" class="form-control required email" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address" value="">
                 <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
               </div>
             </div>
@@ -213,14 +211,13 @@
     </div>
     <!-- Copyright -->
   </footer>
-  <!-- Footer -->
-    {% block postloadjs %}
+{% block postloadjs %}
     <!--Fontawesome script-->
     <script src="https://kit.fontawesome.com/e225a8453d.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
-    {% endblock %}
+{% endblock %}
 
     
   </body>
