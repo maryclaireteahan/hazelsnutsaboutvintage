@@ -9,7 +9,6 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
 import os
 import dj_database_url
 from pathlib import Path
@@ -51,11 +50,12 @@ INSTALLED_APPS = [
     'home',
     'products',
     'bag',
-    'events',
     'checkout',
     'profiles',
     'feedback',
     'coupon',
+    'events',
+
     
     # Other
     'crispy_forms',
