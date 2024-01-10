@@ -1,5 +1,3 @@
-from django.contrib import admin
-
 # Register your models here.
 from django.contrib import admin
 from .models import Event
@@ -8,6 +6,7 @@ from .models import Event
 class EventAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     list_display = (
+        'creator',
         'title',
         'location',
         'start_date',
@@ -19,8 +18,9 @@ class EventAdmin(admin.ModelAdmin):
     
     def get_queryset(self, request):
         qs = super().get_queryset(request)
-        # Check if any filters are applied here unintentionally
+        # Print the SQL query for debugging (optional)
+        print(qs.query)
         return qs
-    
+
 admin.site.register(Event, EventAdmin)
 

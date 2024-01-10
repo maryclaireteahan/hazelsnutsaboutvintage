@@ -7,9 +7,14 @@ from django.utils.text import slugify
 from django.contrib.auth.models import User
 
 
+superuser = User.objects.filter(is_superuser=True).first()
 
 # Create your models here.
 class Event(models.Model):
+    creator = models.ForeignKey(User, on_delete=models.CASCADE,
+                                related_name='events',  
+                                limit_choices_to={'is_superuser': True},
+                                default=superuser.id if superuser else None)
     title = models.CharField(max_length=200, unique=True, null=True, blank=True)
     slug = models.SlugField(max_length=200, unique=True, null=True, blank=True)
     description = models.TextField()

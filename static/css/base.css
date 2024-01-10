@@ -227,6 +227,34 @@ html {
     margin-bottom: 1em;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   }
+
+    /* ------------------------------- coupon */
+  
+  .coupon div {
+    max-width: fit-content;
+  }
+  
+  .coupon-container {
+    height: auto;
+    width: 100%;
+  }
+  
+  .coupon-button-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .coupon-button {
+    width: 100%;
+    background: #117a8b;
+  }
+  
+  .coupon-button .icon {
+    height: auto;
+    width: auto;
+  }
   
   /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
   .arrow-up {
