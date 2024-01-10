@@ -856,7 +856,7 @@ html {
     .feedback-container {
       padding-top: 5em;
     }
-
+  }
   /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
     .container {
