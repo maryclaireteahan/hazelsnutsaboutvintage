@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Product, Category, Brand, Size
-# Register your models here.
+
 
 class ProductAdmin(admin.ModelAdmin):
     """ Admin view for products """
@@ -13,12 +13,12 @@ class ProductAdmin(admin.ModelAdmin):
         'price',
         'image',
     )
-    
+
     ordering = ('sku',)
-    
-    
+
     def get_categories(self, obj):
         return ", ".join([c.name for c in obj.categories.all()])
+
 
 class CategoryAdmin(admin.ModelAdmin):
     """ Admin view for categories """
@@ -27,6 +27,7 @@ class CategoryAdmin(admin.ModelAdmin):
         'name',
     )
 
+
 class BrandAdmin(admin.ModelAdmin):
     """ Admin view for brands """
     list_display = (
@@ -34,13 +35,15 @@ class BrandAdmin(admin.ModelAdmin):
         'name',
     )
 
+
 class SizeAdmin(admin.ModelAdmin):
     """ Admin view for sizes """
     list_display = (
         'friendly_name',
         'name',
     )
-    
+
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Brand, BrandAdmin)
 admin.site.register(Category, CategoryAdmin)

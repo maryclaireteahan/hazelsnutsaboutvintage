@@ -9,12 +9,13 @@ from django.utils.text import slugify
 from django.contrib.auth.models import User
 
 
-
-# Create your models here.
-class Event(models.Model):  
+class Event(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    creator = models.ForeignKey(User, on_delete=models.CASCADE, null=False, blank=False)
-    title = models.CharField(max_length=200, unique=True, null=True, blank=True)
+    creator = models.ForeignKey(User,
+                                on_delete=models.CASCADE,
+                                null=False, blank=False)
+    title = models.CharField(max_length=200, unique=True,
+                             null=True, blank=True)
     slug = models.SlugField(max_length=200, unique=True, null=True, blank=True)
     description = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True, null=True, blank=True)
@@ -35,9 +36,9 @@ class Event(models.Model):
         Returns string representation of an object
         """
         return self.title
-    
+
     def save(self, *args, **kwargs):
-        """ 
+        """
         Overrides the original save method to set the slug
         """
         self.slug = slugify(self.title)

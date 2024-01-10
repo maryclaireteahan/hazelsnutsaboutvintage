@@ -10,10 +10,13 @@ from django_countries.fields import CountryField
 from products.models import Product
 from profiles.models import UserProfile
 
+
 class Order(models.Model):
     """ A model for customer orders """
     order_number = models.CharField(max_length=32, null=False, editable=False)
-    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders') 
+    user_profile = models.ForeignKey(UserProfile,
+                                     on_delete=models.SET_NULL, null=True,
+                                     blank=True, related_name='orders')
     full_name = models.CharField(max_length=50, blank=False)
     email = models.EmailField(max_length=254, blank=False)
     phone_number = models.CharField(max_length=20, blank=False)
@@ -22,26 +25,36 @@ class Order(models.Model):
     street_address1 = models.CharField(max_length=80, blank=False)
     street_address2 = models.CharField(max_length=80, blank=False)
     date = models.DateTimeField(auto_now_add=True)
-    delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
-    order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
-    grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    delivery_cost = models.DecimalField(max_digits=6, decimal_places=2,
+                                        null=False, default=0)
+    order_total = models.DecimalField(max_digits=10, decimal_places=2,
+                                      null=False, default=0)
+    grand_total = models.DecimalField(max_digits=10, decimal_places=2,
+                                      null=False, default=0)
     county = models.CharField(max_length=80, blank=True)
-    postcode = models.CharField(max_length=20, blank=True)  
+    postcode = models.CharField(max_length=20, blank=True)
     original_bag = models.TextField(null=False, blank=False, default='')
-    stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
-    
+    stripe_pid = models.CharField(max_length=254, null=False,
+                                  blank=False, default='')
+
     def _generate_order_number(self):
         """ Generate a random, unique order number using UUID """
         return uuid.uuid4().hex.upper()
-    
+
     def save(self, *args, **kwargs):
-        """ Override the original save method to set the order number if it hasn't been set already """
+        """
+        Override the original save method to set the
+        order number if it hasn't been set already
+        """
         if not self.order_number:
             self.order_number = self._generate_order_number()
         super().save(*args, **kwargs)
-        
-    def update_total(self):     
-        """ Update grand total each time a line item is added, accounting for delivery costs """
+
+    def update_total(self):
+        """
+        Update grand total each time a line item is added,
+        accounting for delivery costs
+        """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
@@ -49,25 +62,30 @@ class Order(models.Model):
             self.delivery_cost = 0
         self.grand_total = self.order_total + self.delivery_cost
         self.save()
-        
+
     def __str__(self):
         """ Return the order number as a string """
         return self.order_number
-    
-    
+
+
 class OrderLineItem(models.Model):
     """ A model for line items in customer orders """
-    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
-    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
+    order = models.ForeignKey(Order, null=False, blank=False,
+                              on_delete=models.CASCADE,
+                              related_name='lineitems')
+    product = models.ForeignKey(Product, null=False, blank=False,
+                                on_delete=models.CASCADE)
     product_size = models.CharField(max_length=2, null=True, blank=True)
     quantity = models.IntegerField(null=False, blank=False, default=0)
-    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
-    
+    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2,
+                                         null=False, blank=False,
+                                         editable=False)
+
     def save(self, *args, **kwargs):
         """ Override the original save method to set the lineitem total """
         self.lineitem_total = self.product.price * self.quantity
         super().save(*args, **kwargs)
-        
+
     def __str__(self):
         """ Return the SKU and order number as a string """
         return f'SKU {self.product.sku} on order {self.order.order_number}'

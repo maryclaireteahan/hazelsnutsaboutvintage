@@ -8,7 +8,6 @@ from django.contrib.auth.decorators import login_required
 from .models import Event
 from .forms import EventForm
 
-# Create your views here.
 
 def all_events(request):
     """ A view to show all events """
@@ -35,6 +34,7 @@ def single_event(request, slug):
 
     return render(request, 'events/single_event.html', context)
 
+
 @login_required
 def add_event(request):
     """ Add a events to the store """
@@ -51,10 +51,12 @@ def add_event(request):
             messages.success(request, 'Successfully added event!')
             return redirect(reverse('single_event', args=[event.slug]))
         else:
-            messages.error(request, 'Failed to add event. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to add event.'
+                           'Please ensure the form is valid.')
     else:
         form = EventForm()
-        
+
     template = 'events/add_event.html'
     context = {
         'form': form,
@@ -67,7 +69,7 @@ def add_event(request):
 @login_required
 def edit_event(request, slug):
     """ Edit a event in the store """
-    
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('events'))
@@ -80,7 +82,9 @@ def edit_event(request, slug):
             messages.success(request, 'Successfully updated event!')
             return redirect(reverse('single_event', args=[event.slug]))
         else:
-            messages.error(request, 'Failed to update event. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to update event.'
+                           'Please ensure the form is valid.')
     else:
         form = EventForm(instance=event)
         messages.info(request, f'You are editing {event.title}')
@@ -113,5 +117,3 @@ def delete_event(request, slug):
                           {'event': event})
     else:
         return render(request, '404.html', status=404)
-
-
