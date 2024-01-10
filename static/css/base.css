@@ -69,7 +69,7 @@ html {
   
   .button-container {
     height: 70%;
-    margin-top: 15em;
+    margin-top: 17em;
     display: flex;
     justify-content: center;
   }
@@ -129,7 +129,7 @@ html {
   }
   
   .add-product-container {
-    margin-top: 15em;
+    margin-top: 17em;
     margin-bottom: 5em;
   }
   
@@ -138,7 +138,7 @@ html {
   }
   
   .products {
-    margin-top: 15em;
+    margin-top: 17em;
   }
   
   .display-none {
@@ -191,7 +191,7 @@ html {
   }
   
   .bag-details {
-    margin-top: 15em;
+    margin-top: 17em;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -338,7 +338,8 @@ html {
   /* Allauth form formatting */
   
   .allauth-container {
-    margin-top: 15em;
+    margin-top: 25em;
+    margin-bottom: 10em;
   }
   
   .allauth-form-inner-content p {
@@ -546,6 +547,7 @@ html {
     align-items: center;
     justify-content: flex-start;
     height: fit-content;
+    margin-top: 21em;
   }
   .event {
     width: 100%;
@@ -635,12 +637,12 @@ html {
   }
   
   .add-event-container {
-    margin-top: 15em;
+    margin-top: 17em;
     margin-bottom: 5em;
   }
   
   .edit-event-container {
-    margin-top: 15em;
+    margin-top: 17em;
     margin-bottom: 5em;
   }
   
@@ -664,14 +666,19 @@ html {
   .feedback div {
     max-width: 100%;
     align-items: flex-start;
+    font-size: 2em;
   }
   
   .feedback-container {
-    padding-top: 15em;
+    padding-top: 17em;
     padding-bottom: 15em;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .feedback-row {
+    font-size: 1.5em;
   }
 
   .feedback-list-container {
@@ -731,7 +738,7 @@ html {
   }
 
   .profile-container {
-    margin-top: 15em;
+    margin-top: 17em;
     margin-bottom: 5em;
   }
   
