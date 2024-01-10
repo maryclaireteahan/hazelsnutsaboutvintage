@@ -427,6 +427,296 @@ html {
     font-size: 0.75em;
   }
 
+  /* -------------------------------- Checkout */
+  
+  .StripeElement,
+  .stripe-style-input {
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 0px;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+  }
+  
+  .StripeElement--focus,
+  .stripe-style-input:focus,
+  .stripe-style-input:active {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+  }
+  
+  .StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+  }
+  
+  .stripe-style-input::placeholder {
+    color: #aab7c4;
+  }
+  
+  .fieldset-label {
+    position: relative;
+    right: 0.5rem;
+  }
+  
+  #payment-form .form-control,
+  #card-element {
+    color: #000;
+    border: 1px solid #000;
+  }
+  
+  .form-control {
+    border-radius: 0px;
+  }
+  
+  select,
+  select option {
+    color: #000000;
+  }
+  
+  select:invalid,
+  select option[value=""] {
+    color: #aab7c4 !important;
+  }
+  
+  #loading-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(23, 162, 184, 0.85);
+    z-index: 9999;
+  }
+  
+  .loading-spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+  }
+    
+  
+  /* -------------------------------- Events */
+  
+  .button-row-event {
+    border-radius: 25px;
+    background-image: radial-gradient(
+      circle,
+      #90d2d5,
+      #73dbbf,
+      #86de8f,
+      #b9d852,
+      rgba(251, 199, 14, 0.2)
+    );
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0em 1em 5em 1em;
+    padding: 3em 1.5em 1em 1.5em;
+  }
+  
+  .event-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: fit-content;
+  }
+  .event {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0em 1em 5em 1em;
+    padding: 3em 1.5em 1em 1.5em;
+    box-shadow: 0px 12px 10px 5px rgba(0, 0, 0, 0.75);
+  }
+  
+  .event-a {
+    background-image: radial-gradient(
+      circle,
+      #b2dfec,
+      #aadbf6,
+      #add4ff,
+      #bacbff,
+      #d0c0ff,
+      #e3b6f2,
+      #f4ade0,
+      #ffa5cb,
+      #ffacad,
+      #ffbe8f,
+      #ffd77e,
+      #def187
+    );
+  }
+  
+  .event-b {
+    background-image: radial-gradient(
+      circle,
+      #9bbae9,
+      #88cbe6,
+      #94d8d6,
+      #b5dfc7,
+      #dae4c3
+    );
+  }
+  
+  .event-c {
+    background-image: radial-gradient(
+      circle,
+      #d16b81,
+      #da787d,
+      #e1877a,
+      #e5967a,
+      #e7a57d,
+      #dcb178,
+      #ccbd7b,
+      #bac886,
+      #90cf9d,
+      #64d2be,
+      #46d0e2,
+      #5fcafb
+    );
+  }
+  
+  .event-d {
+    background-image: radial-gradient(
+      circle,
+      #81eb6c,
+      #b8e368,
+      #dcdc72,
+      #f3d587,
+      #fdd2a0,
+      #ffc8a0,
+      #ffbfa2,
+      #ffb6a6,
+      #ff9e9c,
+      #ff849b,
+      #ff6aa3,
+      #f352b2
+    );
+  }
+  
+  .edit-delete-event {
+    width: fit-content;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: fit-content;
+    margin: 1em 1em 0 1em;
+    flex-direction: column;
+  }
+  
+  .add-event-container {
+    margin-top: 15em;
+    margin-bottom: 5em;
+  }
+  
+  .edit-event-container {
+    margin-top: 15em;
+    margin-bottom: 5em;
+  }
+  
+  .delete-event-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+    
+  
+  /* -------------------------------- Feedback */
+
+  .feedback {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+  
+  .feedback div {
+    max-width: 100%;
+    align-items: flex-start;
+  }
+  
+  .feedback-container {
+    padding-top: 15em;
+    padding-bottom: 15em;
+    display: flex;
+    flex-direction: column;
+  }
+  .feedback-list-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    height: fit-content;
+    width: 90%;
+    padding: 0 0 0 1em;
+    margin-top: 1em;
+  }
+  
+  .feedback-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
+  
+  .feedback-card a {
+    color: black;
+  }
+  
+  .feedback .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .feedback .form-group textarea {
+    width: 100%;
+  }
+
+  /* -------------------------------- Profile */
+
+  .order-history {
+    max-height: 416px; /* height of profile form + submit button */
+    overflow-y: auto;
+  }
+
+  #profile-update-form .form-control {
+      color: #000;
+  }
+
+  #profile-update-form input::placeholder {
+      color: #aab7c4;
+  }
+
+  #id_default_country,
+  #id_default_country option:not(:first-child) {
+      color: #000;
+  }
+
+  #id_default_country option:first-child {
+      color: #aab7c4;
+  }
+
+  .profile-container {
+    margin-top: 15em;
+    margin-bottom: 5em;
+  }
+  
+
   /* -------------------------------- Media Queries */
   
   /* Media query: large or landscape phones (576px and up) -----------------------------------------------576px----------------------------------------------------------------------- */
@@ -468,8 +758,8 @@ html {
     }
   }
   
-  /* Media query: tablets and larger (768px and up) ------------------------------------------------------768px----------------------------------------------------------------------- */
-  @media screen and (min-width: 768px) {
+/* Media query: tablets and larger (768px and up) ------------------------------------------------------768px----------------------------------------------------------------------- */
+@media screen and (min-width: 768px) {
     .product-image-details {
       padding-top: 7em;
     }
