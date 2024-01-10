@@ -1,11 +1,16 @@
 {% extends "base.html" %} {% load static %} {% block extra_css %}
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}" />
+<link rel="stylesheet" href="{% static 'coupon/css/coupon.css' %}" />
 {% endblock %} {% block page_header %}
 <div class="container header-container">
   <div class="row">
     <div class="col"></div>
   </div>
 </div>
+
+
+
+
 {% endblock %} {% block content %}
 <div class="overlay"></div>
 <div class="container bag-details">
@@ -235,34 +240,7 @@
           class="coupon-button btn red-button rounded-0 my-2"
           target="_blank"
         >
-
-
-
-        <div class="modal" tabindex="-1" role="dialog">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">Click here to get your coupon!</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <a
-                href="{% url 'products' %}?category=new_arrivals,deals,clearance"
-                class="btn red-button rounded-0 my-2"
-              >
-                          </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Save changes</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-          <p class="icon mr-2"></p>
+          <p class="icon mr-2">Click here to get your coupon!</p>
         </a>
       </div>
     </div>
