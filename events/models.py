@@ -1,3 +1,5 @@
+import uuid
+
 from django.db import models
 
 # Create your models here.
@@ -7,14 +9,11 @@ from django.utils.text import slugify
 from django.contrib.auth.models import User
 
 
-superuser = User.objects.filter(is_superuser=True).first()
 
 # Create your models here.
-class Event(models.Model):
-    creator = models.ForeignKey(User, on_delete=models.CASCADE,
-                                related_name='events',  
-                                limit_choices_to={'is_superuser': True},
-                                default=superuser.id if superuser else None)
+class Event(models.Model):  
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    creator = models.ForeignKey(User, on_delete=models.CASCADE, null=False, blank=False)
     title = models.CharField(max_length=200, unique=True, null=True, blank=True)
     slug = models.SlugField(max_length=200, unique=True, null=True, blank=True)
     description = models.TextField()
@@ -27,7 +26,7 @@ class Event(models.Model):
 
     class Meta:
         """
-        Order posts from newest to oldest
+        Order events from newest to oldest
         """
         ordering = ['-created_on']
 
@@ -38,6 +37,5 @@ class Event(models.Model):
         return self.title
     
     def save(self, *args, **kwargs):
-        if not self.slug:  # Generate slug only if it doesn't exist
-            self.slug = slugify(self.title)
-            super().save(*args, **kwargs)
+        self.slug = slugify(self.title)
+        super(Event, self).save(*args, **kwargs)

@@ -1,8 +1,8 @@
 {% load static %}
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
 
     {% block meta %}
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,6 +11,8 @@
     {% endblock %}
 
     {% block extra_meta %}
+        <meta name="description" content="Hazels Nuts About Vintage. Irish vintage clothes shop, based in Killarney, Co. Kerry, Ireland.">
+        <meta name="keywords" content="Irish, vintage, clothes, dress, dresses, top, tops, bottoms, new arrivals, clearance, events, sale, Killarney, Kerry, retro">
     {% endblock %}
 
     <!--Favicon-->
@@ -41,7 +43,7 @@
 
     <title>Hazel's Nuts about Vintage!{% block extra_title %}{% endblock %}</title>
   </head>
-  <body style="background: url('{% static 'images/hazelsnutsaboutvintagehero.jpg' %}') no-repeat center center fixed; background-size: cover;" alt="A set dinner table">
+  <body style="background: url('{% static 'images/hazelsnutsaboutvintagehero.jpg' %}') no-repeat center center fixed; background-size: cover;">
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">

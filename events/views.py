@@ -45,6 +45,8 @@ def add_event(request):
     if request.method == 'POST':
         form = EventForm(request.POST, request.FILES)
         if form.is_valid():
+            event = form.save(commit=False)
+            event.creator = request.user
             event = form.save()
             messages.success(request, 'Successfully added event!')
             return redirect(reverse('single_event', args=[event.slug]))
