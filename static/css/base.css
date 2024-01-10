@@ -505,6 +505,9 @@ html {
     justify-content: center;
     align-items: center !important;
     background: wheat;
+    width: 80%;
+    height: 20%;
+    padding: 1em;
   }
 
   .feedback-form {
@@ -826,7 +829,7 @@ html {
     .coupon-button {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       height: 40%;
     }
   
@@ -858,5 +861,9 @@ html {
 
     .table-container {
       font-size: 1.5em;
+    }
+
+    .coupon-button {
+      align-items: center;
     }
   }
