@@ -1,5 +1,4 @@
 {% extends "base.html" %} {% load static %} {% block extra_css %}
-<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}" />
 {% endblock %} {% block page_header %}
 <div class="container header-container">
   <div class="row">
@@ -12,9 +11,9 @@
 <div class="container bag-details">
   <div class="row">
     <div class="col">
-      <hr />
+      <hr>
       <h2 class="logo-font mb-4"><strong>Thank You</strong></h2>
-      <hr />
+      <hr>
     </div>
   </div>
   <div class="row">
@@ -25,7 +24,7 @@
           <strong>{{ order.email }}</strong>.
         </p>
       </div>
-      <hr />
+      <hr>
       <div class="order-confirmation-wrapper p-2 border">
         <div class="row">
           <div class="col">
@@ -206,15 +205,11 @@
     </div>
     {% else %}
     <div class="col-12 col-lg-6 feedback">
-      <hr />
+      <hr>
       <h2 class="logo-font mb-4"><strong>Feedback</strong></h2>
-      <hr />
+      <hr>
       <form
-        method="POST"
-        action="{% url 'all_feedback' %}"
-        class="form mb-2 feedback-form"
-        enctype="multipart/form-data"
-      >
+        method="POST" action="{% url 'all_feedback' %}" class="form mb-2 feedback-form" enctype="multipart/form-data">
         {% csrf_token %} {% for field in feedback_form %}
         <div class="form-group">
           {{ field.label_tag }} {{ field }} {% if field.help_text %}
@@ -231,11 +226,7 @@
         </div>
       </form>
       <div class="coupon-column">
-        <a
-          href="{% url 'coupon' %}"
-          class="coupon-button btn red-button rounded-0 my-2"
-          target="_blank"
-        >
+        <a href="{% url 'coupon' %}" class="coupon-button btn red-button rounded-0 my-2" target="_blank">
           <p class="icon mr-2">Click here to get your coupon!</p>
         </a>
       </div>
@@ -243,10 +234,7 @@
   </div>
   <div class="row deals-button">
     <div class="col-12 col-lg-7">
-      <a
-        href="{% url 'products' %}?category=new_arrivals,deals,clearance"
-        class="btn red-button rounded-0 my-2"
-      >
+      <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn red-button rounded-0 my-2">
         <span class="icon mr-2">
           <i class="fas fa-gifts"></i>
         </span>

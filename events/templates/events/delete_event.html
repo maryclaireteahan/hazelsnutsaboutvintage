@@ -1,5 +1,4 @@
 {% extends "base.html" %} {% load static %} {% block extra_css %}
-<link rel="stylesheet" href="{% static 'events/css/events.css' %}" />
 {% endblock %} {% block page_header %}
 <div class="container header-container">
   <div class="row">
@@ -11,7 +10,7 @@
 <div class="container button-container event-container">
   <div class="row button-row-event">
     <div class="col-md-6 my-auto button-col">
-      <h1 class="display-4 logo-font text-black" value="{{ event.slug }}">
+      <h1 class="display-4 logo-font text-black">
         {{ event.title }}
       </h1>
       <div class="my-5">
@@ -19,23 +18,13 @@
           <p><strong>Are you sure you want to delete this event?</strong></p>
         </div>
         <div class="col{% if s %}-12 mt-2{% endif %}">
-          <form
-            method="post"
-            action="{% url 'delete_event' slug=event.slug %}"
-            class="delete-event-form"
-          >
+          <form method="post" action="{% url 'delete_event' slug=event.slug %}" class="delete-event-form">
             {% csrf_token %} {{form.as_p}}
 
-            <a
-              href="{% url 'single_event' event.slug %}"
-              class="btn btn-outline-black rounded-0 text-uppercase mt-5"
-            >
+            <a href="{% url 'single_event' event.slug %}" class="btn btn-outline-black rounded-0 text-uppercase mt-5">
               <span class="text-uppercase">cancel</span>
             </a>
-            <button
-              type="submit"
-              class="red-button btn rounded-0 text-uppercase mt-5"
-            >
+            <button type="submit" class="red-button btn rounded-0 text-uppercase mt-5">
               Delete
             </button>
           </form>

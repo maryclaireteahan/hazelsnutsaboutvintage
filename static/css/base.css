@@ -141,6 +141,10 @@ html {
     margin-top: 15em;
   }
   
+  .display-none {
+    display: none;
+  }
+
   .single-product {
     font-weight: 1000;
     font-size: 1.5em;

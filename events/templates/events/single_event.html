@@ -1,5 +1,4 @@
 {% extends "base.html" %} {% load static %} {% block extra_css %}
-<link rel="stylesheet" href="{% static 'events/css/events.css' %}" />
 {% endblock %} {% block page_header %}
 <div class="container header-container">
   <div class="row">
@@ -11,14 +10,14 @@
 <div class="col-10 offset-1 button-container event-container">
   <div class="row button-row-event">
     <div class="col-md-6 my-auto button-col">
-      <h1 class="display-4 logo-font text-black" value="{{ event.slug }}">
+      <h1 class="display-4 logo-font text-black">
         {{ event.title }}
       </h1>
       <div class="my-5">
         <div>
           <p>{{ event.description }}</p>
         </div>
-        <hr />
+        <hr>
         <div>
           <p><strong>Date</strong>: {{ event.start_date }}</p>
           {% if event.end_date %}
@@ -33,19 +32,13 @@
         {% if request.user.is_superuser %}
         <p>
           <a href="{% url 'edit_event' slug=event.slug %}">Edit</a> |
-          <a class="text-danger" href="{% url 'delete_event' slug=event.slug %}"
-            >Delete</a
-          >
+          <a class="text-danger" href="{% url 'delete_event' slug=event.slug %}">Delete</a>
         </p>
         {% endif %}
       </div>
       <div class="my-5">
         <h4>
-          <a
-            href="{% url 'events' %}"
-            class="red-button btn btn-lg rounded-0 text-uppercase py-3"
-            >Back To Events</a
-          >
+          <a href="{% url 'events' %}" class="red-button btn btn-lg rounded-0 text-uppercase py-3">Back To Events</a>
         </h4>
       </div>
     </div>

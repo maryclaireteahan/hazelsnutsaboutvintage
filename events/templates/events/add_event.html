@@ -11,21 +11,16 @@
 <div class="container add-event-container">
   <div class="row">
     <div class="col-12 col-md-6">
-      <hr />
+      <hr>
       <h2 class="logo-font mb-4">Event Management</h2>
       <h5 class="text-muted">Add Event</h5>
-      <hr />
+      <hr>
     </div>
   </div>
 
   <div class="row">
     <div class="col-12 col-md-6 table-container">
-      <form
-        method="POST"
-        action="{% url 'add_event' %}"
-        class="form mb-2"
-        enctype="multipart/form-data"
-      >
+      <form method="POST" action="{% url 'add_event' %}" class="form mb-2" enctype="multipart/form-data">
         {% csrf_token %} {{ form|crispy }}
         <div class="text-right">
           <a class="btn btn-outline-black rounded-0" href="{% url 'events' %}">Cancel</a>
