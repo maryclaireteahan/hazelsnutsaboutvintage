@@ -54,10 +54,11 @@
             <td class="py-3">
               <p class="my-0"><strong>{{ item.product.name }}</strong></p>
               <br />
-              <p class="my-0">
-                <strong>Size: </strong>{% if item.product.size %}{{
-                item.product.size|upper }}{% else %}N/A{% endif %}
-              </p>
+              {% if item.product.size %}
+                  <p class="my-0 small">Size: {{ item.product.size|default:"N/A"|upper }}</p>
+              {% else %}
+                  <p class="my-0 small">Size: N/A</p>
+              {% endif %}
               <br />
               <p class="my-0 small text-muted">
                 SKU: {{ item.product.sku|upper }}

@@ -58,10 +58,15 @@
         {% for item in order.lineitems.all %}
         <div class="row">
           <div class="col-12 col-md-4">
-            <p class="small mb-0 text-black font-weight-bold">
-              {{ item.product.name }}{% if item.product_size %} - Size {{
-              item.product.size|upper }}{% endif %}
-            </p>
+            {% if item.product.size %}
+              <p class="small mb-0 text-black font-weight-bold">
+                {{ item.product.size|default:"N/A"|upper }} - Size
+              </p>
+            {% else %}
+              <p class="small mb-0 text-black font-weight-bold">
+                N/A - Size
+              </p>
+            {% endif %}
           </div>
           <div class="col-12 col-md-8 text-md-right">
             <p class="small mb-0">
@@ -230,7 +235,34 @@
           class="coupon-button btn red-button rounded-0 my-2"
           target="_blank"
         >
-          <p class="icon mr-2">Click here to get your coupon!</p>
+
+
+
+        <div class="modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Click here to get your coupon!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <a
+                href="{% url 'products' %}?category=new_arrivals,deals,clearance"
+                class="btn red-button rounded-0 my-2"
+              >
+                          </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+          <p class="icon mr-2"></p>
         </a>
       </div>
     </div>
