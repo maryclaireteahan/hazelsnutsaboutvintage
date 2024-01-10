@@ -1,6 +1,4 @@
-{% extends "base.html" %} {% load static %} {% block extra_css %}
-<link rel="stylesheet" href="{% static 'feedback/css/feedback.css' %}" />
-{% endblock %} {% block page_header %}
+{% extends "base.html" %} {% load static %}{% block page_header %}
 <div class="container header-container">
   <div class="row">
     <div class="col"></div>
@@ -11,12 +9,11 @@
 <div class="container mb-2 bag-details">
   <div class="row">
     <div class="col">
-      <hr />
+      <hr>
       <h2 class="logo-font mb-4">{{ feedback.subject }}</h2>
-      <hr />
+      <hr>
     </div>
   </div>
-
   <div class="row">
     <div class="col table-container">
       <div class="col-12 order-lg-last mb-5">
@@ -25,10 +22,7 @@
     </div>
   </div>
   <div class="my-5">
-    <a
-      href="{% url 'all_feedback' %}"
-      class="red-button btn btn-lg rounded-0 text-uppercase py-3"
-    >
+    <a href="{% url 'all_feedback' %}" class="red-button btn btn-lg rounded-0 text-uppercase py-3">
       <span class="icon">
         <i class="fas fa-chevron-left"></i>
       </span>
