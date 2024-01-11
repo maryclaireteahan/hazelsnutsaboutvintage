@@ -74,35 +74,55 @@ Below are the wireframes for the site that I created using balsamiq. As I was de
 <img src="readme/documentation/wireframes/index.png">
 </details>
 
-<details><summary>Recipe Categories</summary>
-<img src="readme/documentation/wireframes/all_recipes.png">
+<details><summary>Products</summary>
+<img src="readme/documentation/wireframes/products.png">
 </details>
 
-<details><summary>Single Recipe</summary>
-<img src="readme/documentation/wireframes/single_recipe.png">
+<details><summary>Product Detail</summary>
+<img src="readme/documentation/wireframes/product_detail.png">
 </details>
 
-<details><summary>Edit Comment page</summary>
-<img src="readme/documentation/wireframes/comment_edit.png">
+<details><summary>Events / Feedback</summary>
+<img src="readme/documentation/wireframes/list.png">
 </details>
 
-<details><summary>Delete Comment and Delete Recipe</summary>
+<details><summary>Event / Feedback Detail</summary>
+<img src="readme/documentation/wireframes/detail.png">
+</details>
+
+<details><summary>Add Product/ Event</summary>
+<img src="readme/documentation/wireframes/add_edit.png">
+</details>
+
+<details><summary>Edit Product/ Event</summary>
+<img src="readme/documentation/wireframes/add_edit.png">
+</details>
+
+<details><summary>Delete Event</summary>
 <img src="readme/documentation/wireframes/delete.png">
 </details>
 
-<details><summary>Create and Edit Recipe</summary>
-<img src="readme/documentation/wireframes/add_edit_recipe.png">
+<details><summary>Bag</summary>
+<img src="readme/documentation/wireframes/bag.png">
 </details>
 
-<details><summary>Login page</summary>
+<details><summary>Checkout</summary>
+<img src="readme/documentation/wireframes/checkout.png">
+</details>
+
+<details><summary>Checkout Success</summary>
+<img src="readme/documentation/wireframes/checkout_success.png">
+</details>
+
+<details><summary>Login</summary>
 <img src="readme/documentation/wireframes/login.png">
 </details>
 
-<details><summary>Logout page</summary>
+<details><summary>Logout</summary>
 <img src="readme/documentation/wireframes/logout.png">
 </details>
 
-<details><summary>Sign up page</summary>
+<details><summary>Sign up</summary>
 <img src="readme/documentation/wireframes/signup.png">
 </details>
 
@@ -225,7 +245,7 @@ Below is the database diagram that I created using LucidCharts.
 
   
 ### Product Detail page
-- This user is redirected to this section after selecting the product in the previous page. If the user is an admin they will see an option to edit or delete the product. The user will see the same image as the previous page, the size, price brand and a description of the product. Underneath this is the comment section. The user can add it to their bag or return to products.
+- This user is redirected to this section after selecting the product in the previous page. If the user is an admin they will see an option to edit or delete the product. The user will see the same image as the previous page, the size, price brand and a description of the product. The user can add it to their bag or return to products.
 
 <details><summary>Product Detail</summary>
 <img src="readme/documentation/features/product_detail/single_product.png">
@@ -260,7 +280,7 @@ Below is the database diagram that I created using LucidCharts.
 - This section of text gives the user a list of the current and upcoming events that the store owner will be holding. Only the name of the event is shown. Each event has a button that will bring the user to the event detail page.
 
 <details><summary>Events</summary>
-<img src="readme/documentation/features/products/products.png">
+<img src="readme/documentation/features/events/events.png">
 </details>
 
   
@@ -356,7 +376,7 @@ Below is the database diagram that I created using LucidCharts.
 
 </details>
 
-### 404 Error Page
+### Error Messages
 - If an invalid url is input or an unauthorised user tries to create a product or event or edit/delete a product or event by brute forcing their urls they will see this page.
 
 <details><summary>404 Error page</summary>
@@ -369,13 +389,22 @@ Below is the database diagram that I created using LucidCharts.
 
 </details>
 
+### 404 Error Page
+- If an invalid url is input or an unauthorised user tries to create a product or event or edit/delete a product or event by brute forcing their urls they will see this page.
+
+<details><summary>404 Error page</summary>
+<img src="readme/documentation/features/404/404.png">
+</details>
+
+</details>
+
 - - -
 
 ## Future Features
 
 <details>
 
-There are 3 features that I would like to implement in the next iteration that would improve user experience and attract more traffic to my website
+There are 4 features that I would like to implement in the next iteration that would improve user experience and attract more traffic to my website
 - Create a new coupon that is unique to each order number
 - Add a barcode to the bottom of the coupon
 - Add functionality to apply discounts to products if the user has a valid code
@@ -643,6 +672,9 @@ python3 manage.py runserver
 - [Lucidchart](https://lucid.app/) for providing me with tools to create my database system
 - [Balsamiq](https://balsamiq.com/wireframes/) was used to create wireframes
 - [mycolor](https://mycolor.space/) was used to generate color gradient
+- [Stripe Documentation](https://stripe.com/docs) for familiarising myself with how it works
+- [Bootstrap](https://mdbootstrap.com/docs/standard/navigation/footer/) for choosing suitable a footer and applying my own styling where necessary
+- [MailChimp](https://us11.admin.mailchimp.com/) for the subscription input which I then modified
 </details>
 
 - - -
@@ -651,11 +683,10 @@ python3 manage.py runserver
 
 <details>
 
-- I would like to thank my mentor Lauren-Nicole for all her support and guidance during this project 
-- I would also like to thank our cohort facilitator Marko Tot, for sending me useful links as well as giving me one to one support when I was struggling particularly with the models and 404 error page.
-- I would like to thank my classmates Hennadi and Mehatab who also helped me a lot when I was struggling with my models.
+- I would like to give a huge thanks to my mentor Lauren-Nicole, without whom I don't think I'd have made it this far. Her kindness and patience and knows no bounds and I'm so grateful for guidance.
+- I would also like to thank Rebecca from tutor support who helped me with a last minute disaster involving a model. Her patience and friendliness over the hours she spent helping me was much appreciated.
 </details>
 
 - - -
 
-[Back to the top](#let's-eat)
+[Back to the top](#Hazel's-Nuts-About-Vintage)
