@@ -85,8 +85,8 @@ The issues listed in the table below were indentified during the development of 
 
 |N.| Issue |  Action | Status | 
 |:---|:--- |:--- |:--- |
-|01| Ingredients and Instructions do not render in the form of a list even when typed as such in the textareas. | Textarea field in the backend allow lists to be rendered on posted recipe. I have checked the views but isn't clear why the same textareas in the frontend and backend are operating differently | Open |
-|02| When a user likes a recipe the like initial icon of a heart outline should fill in to be a solid heart but it doesn't | I have checked the html and views and can't find an obvious reason as to why it isn't changing | Open |
+|| N/A | |  |
+
 
 </details>
 
@@ -100,22 +100,38 @@ The deployed project was tested using the Lighthouse Audit tool to check for any
 
 |Page | Screenshot | Notes |
 |:---:|:---: |:---: |
-|Index Desktop |<img src="readme/documentation/performance/desktop/index.png">||
-|Index Mobile |<img src="readme/documentation/performance/mobile/index.png">| Height and width for images stated as reason for lower score. I tried changin them but it made no difference. |
-|All Recipes Desktop |<img src="readme/documentation/performance/desktop/all_recipes.png">||
-|All Recipes Mobile |<img src="readme/documentation/performance/mobile/all_recipes.png">||
-|Single Recipe Desktop |<img src="readme/documentation/performance/desktop/single_recipe.png">||
-|Single Recipe Mobile |<img src="readme/documentation/performance/mobile/single_recipe.png">||
-|Delete Comment Desktop |<img src="readme/documentation/performance/desktop/comment_delete.png">||
-|Delete Comment Mobile |<img src="readme/documentation/performance/mobile/comment_delete.png">||
-|Edit Comment Desktop |<img src="readme/documentation/performance/desktop/comment_edit.png">||
-|Edit Comment Mobile |<img src="readme/documentation/performance/mobile/comment_edit.png">||
-|Add Recipe Desktop |<img src="readme/documentation/performance/desktop/admin_recipe_create.png">||
-|Add Recipe Mobile |<img src="readme/documentation/performance/mobile/admin_recipe_create.png">||
-|Edit Recipe Desktop |<img src="readme/documentation/performance/desktop/admin_recipe_edit.png">||
-|Edit Recipe Mobile |<img src="readme/documentation/performance/mobile/admin_recipe_edit.png">||
-|Delete Recipe Desktop |<img src="readme/documentation/performance/desktop/admin_recipe_delete.png">||
-|Delete Recipe Mobile |<img src="readme/documentation/performance/mobile/admin_recipe_delete.png">||
+|Index Desktop |<img src="readme/documentation/performance/desktop/desktop_home.png">||
+|Index Mobile |<img src="readme/documentation/performance/mobile/mobile_home.png">| Height and width for images stated as reason for lower score. I tried changin them but it made no difference. |
+|Products Desktop |<img src="readme/documentation/performance/desktop/desktop_products.png">||
+|Products Mobile |<img src="readme/documentation/performance/mobile/mobile_products.png">||
+|Product Detail Desktop |<img src="readme/documentation/performance/desktop/desktop_product.png">||
+|Product Detail Mobile |<img src="readme/documentation/performance/mobile/desktop_product.png">||
+|Add Products Desktop |<img src="readme/documentation/performance/desktop/">||
+|Add Products Mobile |<img src="readme/documentation/performance/mobile/">||
+|Edit Products Desktop |<img src="readme/documentation/performance/desktop/desktop_edit_product.png">||
+|Edit Products Mobile |<img src="readme/documentation/performance/mobile/mobile_edit_product.png">||
+|Events Desktop |<img src="readme/documentation/performance/desktop/desktop_events.png">||
+|Events Mobile |<img src="readme/documentation/performance/mobile/mobile_events.png">||
+|Event Detail Desktop |<img src="readme/documentation/performance/desktop/desktop_single_event.png">||
+|Event Detail Mobile |<img src="readme/documentation/performance/mobile/mobile_single_event.png">||
+|Add Events Desktop |<img src="readme/documentation/performance/desktop/desktop_add_event.png">||
+|Add Events Mobile |<img src="readme/documentation/performance/mobile/mobile_add_event.png">||
+|Edit Events Desktop |<img src="readme/documentation/performance/desktop/desktop_edit_event.png">||
+|Edit Events Mobile |<img src="readme/documentation/performance/mobile/mobile_edit_event.png">||
+|Delete Events Desktop |<img src="readme/documentation/performance/desktop/desktop_delete_event.png">||
+|Delete Events Mobile |<img src="readme/documentation/performance/mobile/mobile_delete_event.png>||
+|Bag Desktop |<img src="readme/documentation/performance/desktop/desktop_bag.png">||
+|Bag Mobile |<img src="readme/documentation/performance/mobile/mobile_bag.png">||
+|Checkout Desktop |<img src="readme/documentation/performance/desktop/desktop_checkout.png">||
+|Checkout Mobile |<img src="readme/documentation/performance/mobile/mobile_checkout.png">||
+|Checkout Success Desktop |<img src="readme/documentation/performance/desktop/desktop_checkout_success.png">||
+|Checkout Success Mobile |<img src="readme/documentation/performance/mobile/mobile_checkout_success.png">||
+|Coupon Desktop |<img src="readme/documentation/performance/desktop/desktop_coupon.png">||
+|Coupon Mobile |<img src="readme/documentation/performance/mobile/mobile_coupon.png">||
+|Feedback Desktop |<img src="readme/documentation/performance/desktop/desktop_feedback.png">||
+|Feedback Mobile |<img src="readme/documentation/performance/mobile/mobile_feedback.png">||
+|Feedback Detail Desktop |<img src="readme/documentation/performance/desktop/desktop_feedback_detail.png">||
+|Feedback Detail Mobile |<img src="readme/documentation/performance/mobile/mobile_feedback_detail.png">||
 |Signup Desktop |<img src="readme/documentation/performance/desktop/signup.png">||
 |Signup Mobile |<img src="readme/documentation/performance/mobile/signup.png">||
 |Login Desktop |<img src="readme/documentation/performance/desktop/login.png">||

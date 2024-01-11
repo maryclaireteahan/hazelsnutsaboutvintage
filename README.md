@@ -405,8 +405,6 @@ Below is the database diagram that I created using LucidCharts.
 
 - - -
 
-<details>
-
 ## Web Marketing
 
 <details>
