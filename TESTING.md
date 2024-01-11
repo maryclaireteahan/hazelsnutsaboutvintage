@@ -178,7 +178,6 @@ The result for each page are listed bellow:
 | Signup | <img src="readme/documentation/validation/html/signup.png"> | No Errors |
 | Login | <img src="readme/documentation/validation/html/signin.png"> | No Errors |
 | Logout | <img src="readme/documentation/validation/html/signout.png"> | No Errors |
-| 404 | <img src="readme/documentation/validation/html/"> | No Errors |
 | Profile | <img src="readme/documentation/validation/html/profiles.png"> | No Errors |
 
 - - - 

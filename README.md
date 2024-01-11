@@ -156,8 +156,8 @@ I divided the project board into 3 sections:
 - I have implemented the MoSCoW method to prioritise my user stories. each user story either has "Must Have" "Should Have" "Could Have" "Won't Have"
 
 <details><summary>Milestone detail</summary>
-<img src="readme/documentation/user_story/milestone_detail1.png">
-<img src="readme/documentation/user_story/milestone_detail2.png">
+<img src="readme/documentation/user_story/milestone_detail.png">
+<img src="readme/documentation/user_story/milestones.png">
 </details>
 
 - Each user story have acceptance criteria and tasks that needed to be done to accomplish that criteria as well as fixed bugs if relevant
