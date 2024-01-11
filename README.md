@@ -43,7 +43,7 @@
 11. [Acknowledgements](#acknowledgements)
 
  
-<details>
+- - -
 
 ## Design & Planning
 
