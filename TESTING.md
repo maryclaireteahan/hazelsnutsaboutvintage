@@ -74,8 +74,7 @@ The issues listed in the table below were indentified during the development of 
 |04| Feedback pages could be accessed by non admin users | Login required feature wasn't in feedback views.py | Closed | 
 |05| 404 error page wasn't loading | Input handlere404 function to letseat views.py and at the end of relevant conditions in hazelsnutsaboutvintage views.py   | Closed |
 |06| Styles not rendering in live preview | Switch debug to true   | Closed |
-|07| Console Error that messageRow is not a valid DOM element however it disappears when the alert message for logging in and out appears | Delete relevant console.log from script.js | Closed |
-|08| Editing or adding an event in django would read successful but actions wouldn't be applied. The same for editing events in th UI (add events was fine) | Rexamined event model and adjusted save function | Closed |
+|07| Editing or adding an event in django would read successful but actions wouldn't be applied. The same for editing events in th UI (add events was fine) | Rexamined event model and adjusted save function | Closed |
 
 ### Unresolved bugs and issues
 
@@ -99,7 +98,7 @@ The performance is scores low throughout due to the background image. I put it t
 |Page | Screenshot | Notes |
 |:---:|:---: |:---: |
 |Index Desktop |<img src="readme/documentation/performance/desktop/desktop_home.png">||
-|Index Mobile |<img src="readme/documentation/performance/mobile/mobile_home.png">| Height and width for images stated as reason for lower score. I tried changin them but it made no difference. |
+|Index Mobile |<img src="readme/documentation/performance/mobile/mobile_home.png">||
 |Products Desktop |<img src="readme/documentation/performance/desktop/desktop_products.png">||
 |Products Mobile |<img src="readme/documentation/performance/mobile/mobile_products.png">| A large number of images on this page. I put them all through TinyPNG to compress them.  |
 |Product Detail Desktop |<img src="readme/documentation/performance/desktop/desktop_product.png">||
@@ -165,20 +164,20 @@ The result for each page are listed bellow:
 | Single Product | <img src="readme/documentation/validation/html/product_details.png"> | No Errors |
 | Events | <img src="readme/documentation/validation/html/events.png"> | No Errors |
 | Single Event | <img src="readme/documentation/validation/html/single_event.png"> | No Errors |
-| Add Product | <img src="readme/documentation/validation/html/add_product.png"> | No Errors |
-| Edit Product | <img src="readme/documentation/validation/html/edit_product.png"> | No Errors |
-| Add Event | <img src="readme/documentation/validation/html/add_event.png"> | No Errors |
-| Edit Event | <img src="readme/documentation/validation/html/edit_event.png"> | No Errors |
+| Add Product | <img src="readme/documentation/validation/html/add_product.png"> | No Errors. It seems like this notification is referring to something I can't change myself in the code. I searched for it but couldn't find it.|
+| Edit Product | <img src="readme/documentation/validation/html/edit_product.png"> | No Errors. Same as Add Product |
+| Add Event | <img src="readme/documentation/validation/html/add_event.png"> | No Errors. Same as Add Product |
+| Edit Event | <img src="readme/documentation/validation/html/edit_event.png"> | No Errors. Same as Add Product |
 | Bag | <img src="readme/documentation/validation/html/bag.png"> | No Errors |
 | Checkout | <img src="readme/documentation/validation/html/checkout.png"> | No Errors |
 | Checkout Success | <img src="readme/documentation/validation/html/checkout_success.png"> | No Errors |
 | Coupon | <img src="readme/documentation/validation/html/coupon.png"> | No Errors |
-| Feedback | <img src="readme/documentation/validation/html/feedback.png"> | No Errors |
-| Single Feedback | <img src="readme/documentation/validation/html/feedback_detail.png"> | No Errors |
+| Feedback | <img src="readme/documentation/validation/html/feedback.png"> | No Errors. Same as Add Product |
+| Single Feedback | <img src="readme/documentation/validation/html/feedback_detail.png"> | No Errors. Same as Add Product |
 | Signup | <img src="readme/documentation/validation/html/signup.png"> | No Errors |
 | Login | <img src="readme/documentation/validation/html/signin.png"> | No Errors |
 | Logout | <img src="readme/documentation/validation/html/signout.png"> | No Errors |
-| Profile | <img src="readme/documentation/validation/html/profiles.png"> | No Errors |
+| Profile | <img src="readme/documentation/validation/html/profiles.png"> | No Errors. Same as Add Product |
 
 - - - 
 
