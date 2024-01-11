@@ -145,16 +145,23 @@ The result for each page are listed bellow:
 |Page |Screenshot | Notes  | 
 |:---:|:----------------------:|---|
 | Index | <img src="readme/documentation/validation/html/index.png"> | No Errors |
-| All Recipes | <img src="readme/documentation/validation/html/index.png"> | No Errors |
-| Single Recipe | <img src="readme/documentation/validation/html/single_recipe.png"> | No Errors |
-| Edit Comment | <img src="readme/documentation/validation/html/comment_edit.png"> | No Errors |
-| Delete Comment | <img src="readme/documentation/validation/html/comment_delete.png"> | No Errors |
-| Add Recipe | <img src="readme/documentation/validation/html//admin_recipe_create.png"> | No Errors |
-| Edit Recipe | <img src="readme/documentation/validation/html/admin_recipe_edit.png"> | No Errors |
-| Delete Recipe | <img src="readme/documentation/validation/html/admin_recipe_delete.png"> | No Errors |
+| Products | <img src="readme/documentation/validation/html/index.png"> | No Errors |
+| Single Product | <img src="readme/documentation/validation/html/product_details.png"> | No Errors |
+| Events | <img src="readme/documentation/validation/html/events.png"> | No Errors |
+| Single Event | <img src="readme/documentation/validation/html/single_event.png"> | No Errors |
+| Add Product | <img src="readme/documentation/validation/html/add_product.png"> | No Errors |
+| Edit Product | <img src="readme/documentation/validation/html/edit_product.png"> | No Errors |
+| Add Event | <img src="readme/documentation/validation/html/add_event.png"> | No Errors |
+| Edit Event | <img src="readme/documentation/validation/html/edit_event.png"> | No Errors |
+| Bag | <img src="readme/documentation/validation/html/bag.png"> | No Errors |
+| Checkout | <img src="readme/documentation/validation/html/checkout.png"> | No Errors |
+| Checkout Success | <img src="readme/documentation/validation/html/checkout_success.png"> | No Errors |
+| Coupon | <img src="readme/documentation/validation/html/coupon.png"> | No Errors |
+| Feedback | <img src="readme/documentation/validation/html/feedback.png"> | No Errors |
+| Single Feedback | <img src="readme/documentation/validation/html/feedback_detail.png"> | No Errors |
 | Signup | <img src="readme/documentation/validation/html/signup.png"> | Error with signup form not accessible |
-| Login | <img src="readme/documentation/validation/html/login.png"> | No Errors |
-| Logout | <img src="readme/documentation/validation/html/logout.png"> | No Errors |
+| Login | <img src="readme/documentation/validation/html/signin.png"> | No Errors |
+| Logout | <img src="readme/documentation/validation/html/signout.png"> | No Errors |
 | 404 | <img src="readme/documentation/validation/html/404.png"> | No Errors |
 
 - - - 
@@ -165,7 +172,7 @@ The [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator/) was used to val
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
-| style.css | <img src="readme/documentation/validation/css/style.png">| No Errors |
+| base.css | <img src="readme/documentation/validation/css/base.png">| No Errors |
 
 - - - 
 
@@ -175,7 +182,9 @@ The [JShint Validator](https://jshint.com/) was used to validate the JavaScript 
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
-| script.js | <img src="readme/documentation/validation/javascript/script.png"> | No Errors |
+| checkout_stripe_element.js | <img src="readme/documentation/validation/javascript/checkout_stripe_element_1.png"> <img src="readme/documentation/validation/javascript/checkout_stripe_element_2.png">| No Errors |
+| profiles_countryfield.js | <img src="readme/documentation/validation/javascript/profiles_countryfield.png"> | No Errors |
+
 
 - - - 
 
@@ -187,20 +196,91 @@ The [Code Institute Python Linter](https://pep8ci.herokuapp.com)was used to vali
 
 | File | Screenshot  | Notes|
 | --- | ------ |:---:|
-| settings.py |  <img src="readme/documentation/validation/python/letseat/settings.png">  | Pass |
-| urls.py (main) |  <img src="readme/documentation/validation/python/letseat/urls.png">  | Pass |
-| views.py | <img src="readme/documentation/validation/python/letseat/views.png">  | Pass |
+| settings.py |  <img src="readme/documentation/validation/python/hazelsnutsaboutvintage/settings.png">  | Pass |
+| urls.py (main) |  <img src="readme/documentation/validation/python/hazelsnutsaboutvintage/urls.png">  | Pass |
+| views.py | <img src="readme/documentation/validation/python/hazelsnutsaboutvintage/views.png">  | Pass |
 
 
-#### Blog app
+#### Bag app
 
 | File | Screenshot  | Notes|
 | --- | --- | --- |
-| admin.py | <img src="readme/documentation/validation/python/blog/admin.png">   | Pass |
-| forms.py | <img src="readme/documentation/validation/python/blog/forms.png">   | Pass |
-| models.py | <img src="readme/documentation/validation/python/blog/models.png">   | Pass |
-| urls.py |  <img src="readme/documentation/validation/python/blog/urls.png">  | Pass |
-| views.py | <img src="readme/documentation/validation/python/blog/views.png">   | Pass |
+| bag_tools.py | <img src="readme/documentation/validation/python/bag/bag_tools.png">   | Pass |
+| contexts.py | <img src="readme/documentation/validation/python/bag/contexts.png">   | Pass |
+| urls.py | <img src="readme/documentation/validation/python/bag/urls.png">   | Pass |
+| views.py |  <img src="readme/documentation/validation/python/bag/views.png">  | Pass |
+
+#### Checkout app
+
+| File | Screenshot  | Notes|
+| --- | --- | --- |
+| admin.py | <img src="readme/documentation/validation/python/checkout/admin.png">   | Pass |
+| forms.py | <img src="readme/documentation/validation/python/checkout/forms.png">   | Pass |
+| models.py | <img src="readme/documentation/validation/python/checkout/models.png">   | Pass |
+| urls.py |  <img src="readme/documentation/validation/python/checkout/urls.png">  | Pass |
+| views.py | <img src="readme/documentation/validation/python/checkout/views.png">   | Pass |
+| signals.py | <img src="readme/documentation/validation/python/checkout/signals.png">   | Pass |
+| webhook_handlers.py |  <img src="readme/documentation/validation/python/checkout/webhook_handlers.png">  | Pass |
+| webhooks.py | <img src="readme/documentation/validation/python/checkout/webhooks.png">   | Pass |
+
+#### Coupon app
+
+| File | Screenshot  | Notes|
+| --- | --- | --- |
+| admin.py | <img src="readme/documentation/validation/python/coupon/admin.png">   | Pass |
+| models.py | <img src="readme/documentation/validation/python/coupon/models.png">   | Pass |
+| urls.py |  <img src="readme/documentation/validation/python/coupon/urls.png">  | Pass |
+| views.py | <img src="readme/documentation/validation/python/coupon/views.png">   | Pass |
+
+#### Events app
+
+| File | Screenshot  | Notes|
+| --- | --- | --- |
+| admin.py | <img src="readme/documentation/validation/python/events/admin.png">   | Pass |
+| forms.py | <img src="readme/documentation/validation/python/events/forms.png">   | Pass |
+| models.py | <img src="readme/documentation/validation/python/events/models.png">   | Pass |
+| urls.py |  <img src="readme/documentation/validation/python/events/urls.png">  | Pass |
+| views.py | <img src="readme/documentation/validation/python/events/views.png">   | Pass |
+
+#### Feedback app
+
+| File | Screenshot  | Notes|
+| --- | --- | --- |
+| admin.py | <img src="readme/documentation/validation/python/feedback/admin.png">   | Pass |
+| forms.py | <img src="readme/documentation/validation/python/feedback/forms.png">   | Pass |
+| models.py | <img src="readme/documentation/validation/python/feedback/models.png">   | Pass |
+| urls.py |  <img src="readme/documentation/validation/python/feedback/urls.png">  | Pass |
+| views.py | <img src="readme/documentation/validation/python/feedback/views.png">   | Pass |
+
+
+#### Home app
+
+| File | Screenshot  | Notes|
+| --- | --- | --- |
+| urls.py |  <img src="readme/documentation/validation/python/home/urls.png">  | Pass |
+| views.py | <img src="readme/documentation/validation/python/home/views.png">   | Pass |
+
+
+#### Products app
+
+| File | Screenshot  | Notes|
+| --- | --- | --- |
+| admin.py | <img src="readme/documentation/validation/python/products/admin.png">   | Pass |
+| forms.py | <img src="readme/documentation/validation/python/products/forms.png">   | Pass |
+| models.py | <img src="readme/documentation/validation/python/products/models.png">   | Pass |
+| urls.py |  <img src="readme/documentation/validation/python/products/urls.png">  | Pass |
+| views.py | <img src="readme/documentation/validation/python/products/views.png">   | Pass |
+| widgets.py | <img src="readme/documentation/validation/python/products/widgets.png">   | Pass |
+
+
+#### Profiles app
+
+| File | Screenshot  | Notes|
+| --- | --- | --- |
+| forms.py | <img src="readme/documentation/validation/python/profiles/forms.png">   | Pass |
+| models.py | <img src="readme/documentation/validation/python/profiles/models.png">   | Pass |
+| urls.py |  <img src="readme/documentation/validation/python/profiles/urls.png">  | Pass |
+| views.py | <img src="readme/documentation/validation/python/profiles/views.png">   | Pass |
 
 </details>
 
