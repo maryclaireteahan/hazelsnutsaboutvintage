@@ -212,12 +212,8 @@ Below is the database diagram that I created using LucidCharts.
 - This section of text introduces the user to the store with a statement image of the actual storefront. This is layered over with a box containing a brief sentence and the call to action. The user is enticed to with a "Shop Now" button to move to the product page.
 
 <details><summary>Index Hero</summary>
-<img src="readme/documentation/features/index/hero.png">
+<img src="readme/documentation/features/index/home.png">
 </details>
-<details><summary>Index Button</summary>
-<img src="readme/documentation/features/index/discover_recipes.png">
-</details>
-
 
 ### Products page
 - This section of text gives the user categories of products to browse. The user is also able to sort the products by price, brand or category. Each product has an image or placeholder in the absence of an image, either of which can be clicked to redirect to the product page.
@@ -239,13 +235,10 @@ Below is the database diagram that I created using LucidCharts.
 - Only user admin has access to this page. The user admin will be required to fill out each field before they can submit the reciproductpe which will publish immediately.
 
 <details><summary>Add product page</summary>
-<img src="readme/documentation/features/add_event/">
-<img src="readme/documentation/features/add_event/">
-<img src="readme/documentation/features/add_event/">
-<img src="readme/documentation/features/add_event/">
-<img src="readme/documentation/features/add_event/">
-<img src="readme/documentation/features/add_product/">
-<img src="readme/documentation/features/add_product/">
+<img src="readme/documentation/features/add_product/add_product_error_1.png">
+<img src="readme/documentation/features/add_product/add_product_error_2.png">
+<img src="readme/documentation/features/add_product/add_product_error_3png">
+<img src="readme/documentation/features/add_product/add_product_error_4.png">
 </details>
 
 ### Edit Product page
