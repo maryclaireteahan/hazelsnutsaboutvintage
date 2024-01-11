@@ -50,20 +50,22 @@
 
 #### Site User
 - As a Site User, I can view a list of products so that I can choose one to buy
-- As a Site User, I can click on a product so that I can view the product in more detail and add it to my bag
+- As a Site User, I can view a product so that I can inspect the product in more detail and add it to my bag
 - As a Site User, I can click an Add to Bag button so that I can ladd the product to my bag to purchase
 - As a Site User, I can enter my details so that I can pay for the product and have it delivered to the correct address
 - As a Site User, I can give feedback so that I can let the store owner know about my experience with the online store
-- As a Site User, I can give get a coupon for a discount so that I can use it in-store
+- As a Site User, I can get a coupon for a discount so that I can use it in-store
 - As a Site User, I can view a list of events so that I can see if the store is running any events I would be interested in
-- As a Site User, I can click on an event so that I can view the event in more detail
+- As a Site User, I can view an event so that I can inspect the event in more detail
 - As a Site User, I can sign up to be a member/ login as an existing member so that I can be a part of the site's community and receive updates
+- As a Site User, I can view my profile so that I can review my personal info and previous order history
 
 #### Site Admin
 - As a Site Admin, I can create, edit and delete products so that I can be in control of what products are shown to Site Users
 - As a Site Admin, I can create, edit and delete events so that I can be in control of what events are shown to Site Users
 - As a Site Admin, I can assign a category, size and brand to the products so that Site Users will be able to find products specific to what they need
 - As a Site Admin, I can offer a coupon after a purchase so that I can draw Site Users users back to my store
+- As a Site Admin, I can view my customers feedback so that I can see the areas in which the business is lacking and improve
 
 
 
