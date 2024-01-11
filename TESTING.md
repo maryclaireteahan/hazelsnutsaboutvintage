@@ -115,7 +115,7 @@ The deployed project was tested using the Lighthouse Audit tool to check for any
 |Edit Events Desktop |<img src="readme/documentation/performance/desktop/desktop_edit_event.png">||
 |Edit Events Mobile |<img src="readme/documentation/performance/mobile/mobile_edit_event.png">||
 |Delete Events Desktop |<img src="readme/documentation/performance/desktop/desktop_delete_event.png">||
-|Delete Events Mobile |<img src="readme/documentation/performance/mobile/mobile_delete_event.png>||
+|Delete Events Mobile |<img src="readme/documentation/performance/mobile/mobile_delete_event.png">||
 |Bag Desktop |<img src="readme/documentation/performance/desktop/desktop_bag.png">||
 |Bag Mobile |<img src="readme/documentation/performance/mobile/mobile_bag.png">||
 |Checkout Desktop |<img src="readme/documentation/performance/desktop/desktop_checkout.png">||
@@ -128,12 +128,12 @@ The deployed project was tested using the Lighthouse Audit tool to check for any
 |Feedback Mobile |<img src="readme/documentation/performance/mobile/mobile_feedback.png">||
 |Feedback Detail Desktop |<img src="readme/documentation/performance/desktop/desktop_feedback_detail.png">||
 |Feedback Detail Mobile |<img src="readme/documentation/performance/mobile/mobile_feedback_detail.png">||
-|Signup Desktop |<img src="readme/documentation/performance/desktop/signup.png">||
-|Signup Mobile |<img src="readme/documentation/performance/mobile/signup.png">||
-|Login Desktop |<img src="readme/documentation/performance/desktop/login.png">||
-|Login Mobile |<img src="readme/documentation/performance/mobile/login.png">||
-|Logout Desktop |<img src="readme/documentation/performance/desktop/logout.png">||
-|Logout Mobile |<img src="readme/documentation/performance/mobile/logout.png">||
+|Signup Desktop |<img src="readme/documentation/performance/desktop/desktop_signup.png">||
+|Signup Mobile |<img src="readme/documentation/performance/mobile/mobile_signup.png">||
+|Login Desktop |<img src="readme/documentation/performance/desktop/desktop_signin.png">||
+|Login Mobile |<img src="readme/documentation/performance/mobile/mobile_signin.png">||
+|Logout Desktop |<img src="readme/documentation/performance/desktop/desktop_signout.png">||
+|Logout Mobile |<img src="readme/documentation/performance/mobile/mobile_signout.png">||
 
 </details>
 
