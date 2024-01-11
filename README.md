@@ -393,7 +393,7 @@ Below is the database diagram that I created using LucidCharts.
 </details>
 
 </details>
-
+<details>
 ### 404 Error Page
 - If an invalid url is input or an unauthorised user tries to create a product or event or edit/delete a product or event by brute forcing their urls they will see this page.
 
@@ -408,6 +408,8 @@ Below is the database diagram that I created using LucidCharts.
 ## Web Marketing
 
 <details>
+
+The pupose of this site is a B2C and it's main core business intent is to sell cintage clothing to the general population. Web marketing is the process of marketing a  business online, and it's a cost-effective way to reach people who are most interested in what a business has to offer. 
 
 For this ecommerce project I have chosen to use free web marketing strategies. These are:
 
