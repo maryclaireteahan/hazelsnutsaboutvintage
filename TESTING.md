@@ -68,18 +68,14 @@ The issues listed in the table below were indentified during the development of 
 
 |N.| Issue |  Action | Status | 
 |:---|:--- |:--- |:--- |
-|01| Instructions, Ingredients and Category fields weren't required to submit a new recipe | Remove null and blank = True and set a default | Closed | 
-|02| edit/delete recipe available to all users | Add condition for user to authenticated and a super user to have edit/delete option render | Closed | 
-|03| Brute forcing the URL to edit/delete recipe allowed non superuser to edit/delete recipes | Update views to have non-superusers redirected to 404 error page | Closed | 
-|04| Brute forcing the URL to edit/delete comments allowed any user to edit/delete any other users' comments | Update views to have user's who isn't the comment owner redirected to 404 error page | Closed | 
-|05| Alert messages wouldn't close when clicking the X | Add javascript to remove the element when the X is clicked | Closed | 
-|06| edit/delete recipe available to all users | Add condition for user to authenticated and a super user to have edit/delete option render | Closed |
-|09| Inpunt forms don't prepoulate fields with original comment or recipe values when editing | passed the recipe instance as an argument to the form constructor | Closed |
-|10| Heroku deployment failing | Removed unused CAB import from msilib | Closed |
-|11| Categories weren't rendering | In models.py relevant functions were moved inside catergories class as they were mistakenly sitting outside it | Closed | 
-|12| 404 error page wasn't loading | Input handlere404 function to letseat views.py and at the end of relevant conditions in blog views.py   | Closed |
-|13| Styles not rendering in live preview | Switch debug to true   | Closed |
-|14| Console Error that messageRow is not a valid DOM element however it disappears when the alert message for logging in and out appears. | Delete relevant console.log from script.js | Closed |
+|01| No css styles applied on deployed site | Changed debug to False in settings.py | Closed |
+|02| Date field in add/edit events doesn't accept dates if written certain ways | Added placeholder specifing cacceptable date format | Closed |
+|03| Heroku deployment failing | Convig vars not up to date | Closed |
+|04| Feedback pages could be accessed by non admin users | Login required feature wasn't in feedback views.py | Closed | 
+|05| 404 error page wasn't loading | Input handlere404 function to letseat views.py and at the end of relevant conditions in blog views.py   | Closed |
+|06| Styles not rendering in live preview | Switch debug to true   | Closed |
+|07| Console Error that messageRow is not a valid DOM element however it disappears when the alert message for logging in and out appears | Delete relevant console.log from script.js | Closed |
+|08| Editing or adding an event in django would read successful but actions wouldn't be applied. The same for editing events in th UI (add events was fine) | Rexamined event model and adjusted save function | Closed |
 
 ### Unresolved bugs and issues
 
