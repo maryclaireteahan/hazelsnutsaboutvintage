@@ -32,15 +32,18 @@
     * [Sign Out page](#Signout-page)
     * [Sign up page](#signup-page)
     * [404 Error page](#404-error-page)
+3. [Web Marketing](#web-marketing)
+4. [Future Features](#future-features)
+5. [Technologies Used](#technologies-used)
+6. [Libraries](#libraries-used)
+7. [Testing](#testing)
+8. [Bugs](#bugs)
+9. [Deployment](#deployment)
+10. [Credits](#credits)
+11. [Acknowledgements](#acknowledgements)
 
-3. [Future Features](#future-features)
-4. [Technologies Used](#technologies-used)
-5. [Libraries](#libraries-used)
-6. [Testing](#testing)
-7. [Bugs](#bugs)
-8. [Deployment](#deployment)
-9. [Credits](#credits)
-10. [Acknowledgements](#acknowledgements)
+ 
+<details>
 
 ## Design & Planning
 
@@ -117,11 +120,11 @@ Below are the wireframes for the site that I created using balsamiq. As I was de
 </details>
 
 <details><summary>Login</summary>
-<img src="readme/documentation/wireframes/login.png">
+<img src="readme/documentation/wireframes/signin.png">
 </details>
 
 <details><summary>Logout</summary>
-<img src="readme/documentation/wireframes/logout.png">
+<img src="readme/documentation/wireframes/signup.png">
 </details>
 
 <details><summary>Sign up</summary>
@@ -402,6 +405,52 @@ Below is the database diagram that I created using LucidCharts.
 
 - - -
 
+<details>
+
+## Web Marketing
+
+<details>
+
+For this ecommerce project I have chosen to use free web marketing strategies. These are:
+
+   - SEO and content marketing
+   - Social media marketing
+   - Email newsletter subscription
+
+### SEO IMPLEMENTATION
+
+Some of the tecniques for SEO implementation for this project is done by using semantic HTML, minimize the keyword stuff but use these keywords in natural sentences in content of the website, use descriptive alt attribute for images, use metadata description and keyword on the head level of the project and using noopener in rel and descriptive aria-label attributes for external links.
+
+The keywords are short-tailed and long-tailed for this project, and after much deliberation these keywords are as follows:
+      
+   - Irish, vintage, clothes, dress, dresses, top, tops, bottoms, new arrivals, clearance, events, sale, Killarney, Kerry, retro.
+
+For a good SEO implementation robots.txt is also added at the project root level which tells search engine crawlers which URLs the crawler can access on the website. This is used mainly to avoid overloading the site with requests; it is not a mechanism for keeping a web page out of Google.
+
+Sitemap.xml was also included in the project root level. It is a file that lists a website’s essential pages, making sure Google can find and crawl them all. It also helps search engines understand your website structure. You want Google to crawl every important page of your website. But sometimes, pages end up without internal links pointing to them, making them hard to find. A sitemap can help speed up content discovery.
+
+<br>
+
+### Social Media Marketing
+
+As this is a real busines there was alreayd a Facebook page, because it has the largest number of users and the widest demographic. The purpose of a Facebook bussines page is to get potential customers attention on the business and to promote company's products and services.
+
+![Facebook page of Hazel's Nuts About Vintage](readme/documentation/seo/facebook.png)
+
+<br>
+
+### Email Marketing
+
+The use of email within the ecommerce projects is to promote a business’s products and services, as well as customer loyalty. Email marketing is a  a key pillar of your digital marketing strategy. It is a form of marketing that can make the customers on your email list aware of new products, discounts, and other services.
+
+Mailchimp was used for the subscription form for newsletter that can help optimize email marketing to get the best marketing program.
+
+![Newsletter subscription form from Mailchimp](readme/documentation/seo/mailchimp.png)
+
+</details>
+
+- - -
+
 ## Future Features
 
 <details>
@@ -677,6 +726,8 @@ python3 manage.py runserver
 - [Stripe Documentation](https://stripe.com/docs) for familiarising myself with how it works
 - [Bootstrap](https://mdbootstrap.com/docs/standard/navigation/footer/) for choosing suitable a footer and applying my own styling where necessary
 - [MailChimp](https://us11.admin.mailchimp.com/) for the subscription input which I then modified
+- [Hazel's Nuts About Vintage](https://www.facebook.com/Hazelsnutsaboutvintage/) For the pictures used as favicon logo and background image
+- [Alamy](https://www.alamy.com/) For the stock photos used as products
 </details>
 
 - - -
@@ -685,10 +736,11 @@ python3 manage.py runserver
 
 <details>
 
-- I would like to give a huge thanks to my mentor Lauren-Nicole, without whom I don't think I'd have made it this far. Her kindness and patience and knows no bounds and I'm so grateful for guidance.
+- I would like to give a huge thanks to my mentor Lauren-Nicole Popich, without whom I don't think I'd have made it this far. Her kindness and patience and knows no bounds and I'm so grateful for guidance.
 - I would also like to thank Rebecca from tutor support who helped me with a last minute disaster involving a model. Her patience and friendliness over the hours she spent helping me was much appreciated.
 </details>
 
 - - -
+###### <i>Disclaimer: This project was created for educational use only as part of Code Institute's Porject Portfolio 5</i>
 
 [Back to the top](#Hazel's-Nuts-About-Vintage)

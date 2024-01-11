@@ -1,13 +1,17 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import Feedback
 from .forms import FeedbackForm
 
-
+@login_required
 def feedback(request):
     """ A view to handle feedback submission """
-    # Assuming you want to display the latest feedback
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('events'))
+
     feedback = Feedback.objects.latest('created_at')
     context = {
         'feedback': feedback,
@@ -15,9 +19,13 @@ def feedback(request):
     }
     return render(request, 'feedback/feedback.html', context)
 
-
+@login_required
 def all_feedback(request):
     """ A view to show all feedback """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('events'))
+    
     if request.method == 'POST':
         feedback_form = FeedbackForm(request.POST)
         if feedback_form.is_valid():

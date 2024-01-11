@@ -302,27 +302,32 @@ As a Site User, I want to be able to:
 
 | User Stories |  Notes|
 | --- | --- | 
-| view a list of recipes so that I can choose one to read. | Pass |
-| click on a recipe post so that I can read the full recipe. |  Pass |
-| see how many likes a post has received so that I can see what recipes are most popular. | Pass |
-| see who commented what under each post so that I can see what the Site Users think of specific recipes and how they might change them. | Pass |
+| I can click an Add to Bag button so that I can ladd the product to my bag to purchase. | Pass |
+| I can enter my details so that I can pay for the product and have it delivered to the correct address. |  Pass |
+| I can view a list of products so that I can choose one to buy. | Pass |
+| I can view a product so that I can inspect the product in more detail and add it to my bag. | Pass |
 
 *Should Have*
 
 | User Stories |  Notes|
 | --- | --- | 
-| sign up to be a member/ login as an existing member so that I can be a part of the site's community. |  Pass |
-| click a like button so that I can like a recipe and then unlike if needed. | Pass |
+| I can give feedback so that I can let the store owner know about my experience with the online store. |  Pass |
+| I can sign up to be a member/ login as an existing member so that I can be a part of the site's community and receive updates. |  Pass |
+| I can view my profile so that I can review my personal info and previous order history. |  Pass |
+
 
 *Could Have*
 
 | User Stories |  Notes|
 | --- | --- | 
-| post a comment on a recipe post so that I can interact with the site's community. | Pass |
+| I can get a coupon for a discount so that I can use it in-store. | Pass |
 | edit or delete my comment so that if I made a spelling error or changed my mind about what I said I can edit or delete it. | Pass |
+| I can view a list of events so that I can see if the store is running any events I would be interested in. | Pass |
+| I can view an event so that I can inspect the event in more detail. | Pass |
 
 
 ### **Site Admin**
+
 
 - - -
 
@@ -332,10 +337,17 @@ As Site Admin for the site I want to be able to:
 
 | User Stories |  Notes|
 | --- | --- | 
-| create, edit and delete recipe posts so that I can be in control of what content is shown to Site Users. | Pass |
-| assign a category to the recipe post so that Site Users will be able to find recipes specific to what they need. | Pass |
-| see who commented what under each post so that I can see what the Site Users think of specific recipes and how they might change them. | Pass |
-| see how many likes a post has received so that I can see what recipes are most popular. | Pass |
+| create, edit and delete products so that I can be in control of what products are shown to Site Users. | Pass |
+| create, edit and delete events so that I can be in control of what events are shown to Site Users. | Pass |
+
+
+*Should Have*
+
+| User Stories |  Notes|
+| --- | --- | 
+| assign a category, size and brand to the products so that Site Users will be able to find products specific to what they need. | Pass |
+| offer a coupon after a purchase so that I can draw Site Users users back to my store. | Pass |
+|  view my customers feedback so that I can see the areas in which the business is lacking and improve. | Pass |
 
 </details>
 
@@ -381,51 +393,61 @@ As Site Admin for the site I want to be able to:
 | | click on dropdown menu, then log out | Redirects to log out page | Pass |
 | | Click to confirm to sign out  | Redirects to landing page and displays message with the sign out confirmation | Pass |
 | | Click Cancel button | Redirection to Index page | Pass |
-| **All Recipes** |  |  |  |
-| | Click anywhere on a recipe card | User will be redirected to the Single Recipe page | Pass |
-| **Single Recipe** |  |  |  |
-| | Click the like icon on a recipe if not logged in | Like count remains unchanged | Pass  |
-| | Click the like button on a recipe that the user hasn't liked before | Like count will increase by 1 | Pass |
-| | Click the like button on a recipe already liked by the user | Like count will decrease by 1 | Pass |
-| | Click delete on recipe (only visable to admin)  | User is redirected to Delete Recipe confirmation page | Pass  |
-| | Click edit on recipe (only visable to admin) | User is redirected to Edit Recipe page | Pass   |
-| | Brute forcing the URL to delete recipe if not logged in | Redirects user to login page | Pass | 
-| | Brute forcing the URL to delete recipe while logged in (NOT admin) | Redirects user to error page | Pass |
-| | Brute forcing the URL to edit recipe if not logged in | Redirects user to login page | Pass | 
-| | Brute forcing the URL to edit recipe while logged in not as (NOT admin) | Redirects user to error page | Pass |
-| **Comments on Single Recipe** | | | | 
-| | Comment a recipe if not logged in| Feature not available, user promted to log in | Pass |
-| | Click submit on new comment form on a recipe | New comment is created | Pass |
-| | Click submit on new comment form without adding content | User is prompted to enter something into the field before submitting | Pass |
-| | Click edit on own comment (only visable to comment user) | User is redirected to comment edit page | Pass  |
-| | Click delete on own comment (only visable to comment user) | User is redirected to comment delete confirmation page | Pass  |
-| | Brute forcing the URL to delete another user's comment if not logged in | Redirects user to login page | Pass | 
-| | Brute forcing the URL to delete another user's comment while logged in | Redirects user to error page | Pass |
-| | Brute forcing the URL to edit another user's comment if not logged in | Redirects user to login page | Pass | 
-| | Brute forcing the URL to edit another user's comment while logged in | Redirects user to error page | Pass | 
-| **Edit Comment** | | | | 
-| | Fill in comment form and click submit | Original comment will be edited User will be redirected to the All Recipes | Pass | 
-| | Click on the Cancel button | User will be redirected to All Recipes| Pass | 
-| **Delete Comment** | | | | 
-| | Click on the Delete button | Comment or reply will be permanently deleted and User will be redirected to All Recipes | Pass | 
-| | Click on the Cancel button | User will be redirected to All Recipes | Pass |  
-| **Add Recipe** |  |  |  |
-| | Click Submit on add recipe form without adding content | User is prompted to enter something into each field before submitting | Pass |
-| | Click Cancel on add recipe form | User will be redirected to All Recipes | Pass |
-| **Edit Recipe** | | | | 
-| | Fill in post form and click submit | Original recipe can be edited and User will be redirected to the All Recipes | Pass | 
-| | Click on the Cancel button | User will be redirected to the All Recipes | Pass | 
-| **Delete Recipe** | | | | 
-| | Click on the Delete button | Recipes will be permanently deleted and User will be redirected to the All Recipes | Pass | 
-| | Click on the Cancel button | User will be redirected to the All Recipes | Pass | 
+| **Products** |  |  |  |
+| | Click image on a product | User will be redirected to the Product Detail page | Pass |
+| | Click each option in sort by drop down | Products' order changes depending on what they're being sorted by | Pass |
+| **Product Detail** |  |  |  |
+| | Click the Add to Bag button | Success message to say item has been added to bag, bag icon show the value of the products in the bag | Pass |
+| | Click delete on product (only visable to admin)  | Product will be permanently deleted and User will be redirected to the Product | Pass  |
+| | Click edit on product (only visable to admin) | User is redirected to Edit Product page | Pass |
+| | Brute forcing the URL to delete product if not logged in | Redirects user to login page | Pass | 
+| | Brute forcing the URL to delete product while logged in (NOT admin) | Redirects user to error page | Pass |
+| | Brute forcing the URL to edit product if not logged in | Redirects user to login page | Pass | 
+| | Brute forcing the URL to edit product while logged in not as (NOT admin) | Redirects user to error page | Pass |
+| **Events** |  |  |  |
+| | Click button on a event | User will be redirected to the Event Detail page | Pass |
+| **Event Detail** |  |  |  |
+| | Click go back button  | User is redirected to Events page | Pass  |
+| | Click delete on event (only visable to admin)  | User is redirected to Delete Event confirmation page | Pass  |
+| | Click edit on event (only visable to admin) | User is redirected to Edit event page | Pass   |
+| | Brute forcing the URL to delete event if not logged in | Redirects user to login page | Pass | 
+| | Brute forcing the URL to delete event while logged in (NOT admin) | Redirects user to error page | Pass |
+| | Brute forcing the URL to edit event if not logged in | Redirects user to login page | Pass | 
+| | Brute forcing the URL to edit event while logged in not as (NOT admin) | Redirects user to error page | Pass |
+| **Add Product** |  |  |  |
+| | Click Submit on add product form without adding content | User is prompted to enter something into each field before submitting | Pass |
+| | Click Cancel on add product form | User will be redirected to Products | Pass |
+| **Edit Product** | | | | 
+| | Fill in post form and click submit | Original product can be edited and User will be redirected to the Products | Pass | 
+| | Click on the Cancel button | User will be redirected to the Products | Pass | 
+| **Add Event** |  |  |  |
+| | Click Submit on add event form without adding content | User is prompted to enter something into each field before submitting | Pass |
+| | Click Cancel on add event form | User will be redirected to Events | Pass |
+| **Edit Event** | | | | 
+| | Fill in post form and click submit | Original event can be edited and User will be redirected to the Events | Pass | 
+| | Click on the Cancel button | User will be redirected to the Events | Pass | 
+| **Delete Event** | | | | 
+| | Click on the Delete button | Event will be permanently deleted and User will be redirected to the Events | Pass | 
+| | Click on the Cancel button | User will be redirected to the Events | Pass | 
 | **Error Pages** | | | | 
 | | Click on Home button | User will be redirected to Index page | Pass | 
+| **Bag** |  |  |  |
+| | Click the Secure Checkout button | Redirected to Checkout page | Pass |
+| | Click the Keep Shopping button | Redirected to Products | Pass |
+| | Click the Remove link | Item is removed from bag | Pass |
+| **Checkout** |  |  |  |
+| | Click the Complete Order without filling in required fields | Request denied until all required fields are entered | Pass |
+| **Checkout Sucess** |  |  |  |
+| | Click the Coupon button | Redirected to new tab with coupon | Pass |
+| | Click the submit button for feedback | All fields must be filled out before submitting | Pass |
+| **Feedback** |  |  |  |
+| | Click button on a event | User will be redirected to the Event Detail page | Pass |
+| **Feedback Detail** |  |  |  |
+| | Click go back button  | User is redirected to Events page | Pass  |
 | **Footer** | | | | 
 | | Click on Facebook Icon | Opens new tab to Facebook | Pass |
-| | Click on Twitter Icon | Opens new tab to Twitter | Pass |
-| | Click on Youtube Icon | Opens new tab to Youtube | Pass |
 | | Click on Instagram Icon | Opens new tab to Instagram | Pass |
-| | Click on Linkedin Icon | Opens new tab to LinkedIn | Pass |
+| | Click on submit | Email address required | Pass |
 
 </details>
 
