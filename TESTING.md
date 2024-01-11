@@ -72,8 +72,8 @@ The issues listed in the table below were indentified during the development of 
 |02| Date field in add/edit events doesn't accept dates if written certain ways | Added placeholder specifing cacceptable date format | Closed |
 |03| Heroku deployment failing | Convig vars not up to date | Closed |
 |04| Feedback pages could be accessed by non admin users | Login required feature wasn't in feedback views.py | Closed | 
-|05| 404 error page wasn't loading | Input handlere404 function to letseat views.py and at the end of relevant conditions in hazelsnutsaboutvintage views.py   | Closed |
-|06| Styles not rendering in live preview | Switch debug to true   | Closed |
+|05| 404 error page wasn't loading | Input handlere404 function to hazelsnutsaboutvintage views.py  | Closed |
+|06| Styles not rendering in live preview | Switch debug to true  | Closed |
 |07| Editing or adding an event in django would read successful but actions wouldn't be applied. The same for editing events in th UI (add events was fine) | Rexamined event model and adjusted save function | Closed |
 
 ### Unresolved bugs and issues
