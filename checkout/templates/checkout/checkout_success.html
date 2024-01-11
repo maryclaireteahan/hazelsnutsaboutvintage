@@ -4,7 +4,7 @@
     <div class="col"></div>
   </div>
 </div>
-
+<!-- Order Details -->
 {% endblock %} {% block content %}
 <div class="overlay"></div>
 <div class="container bag-details">
@@ -203,6 +203,7 @@
       </div>
     </div>
     {% else %}
+    <!-- Feedback -->
     <div class="col-12 col-lg-6 feedback">
       <hr>
       <h2 class="logo-font mb-4"><strong>Feedback</strong></h2>
@@ -224,6 +225,7 @@
           </button>
         </div>
       </form>
+      <!-- Coupon -->
       <div class="coupon-column">
         <a href="{% url 'coupon' %}" class="coupon-button btn red-button rounded-0 my-2" target="_blank">
           <p class="icon mr-2">Click here to get your coupon!</p>

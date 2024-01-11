@@ -6,6 +6,7 @@
 </div>
 {% endblock %} {% block content %}
 <div class="container-fluid button-container event-container">
+  <!-- Events Listed  -->
   {% for event in events %}
   <div class="row event {% cycle 'event-a' 'event-b' 'event-c' 'event-d' %}">
     <div class="col-7 col-md-6 my-auto button-col">

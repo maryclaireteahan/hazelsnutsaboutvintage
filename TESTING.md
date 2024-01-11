@@ -94,14 +94,16 @@ The issues listed in the table below were indentified during the development of 
 
 The deployed project was tested using the Lighthouse Audit tool to check for any major issues. The results for each page are listed below.
 
+The performance is scores low throughout due to the background image. I put it through [TinyPNG](https://tinypng.com/) to compress it which helped.
+
 |Page | Screenshot | Notes |
 |:---:|:---: |:---: |
 |Index Desktop |<img src="readme/documentation/performance/desktop/desktop_home.png">||
 |Index Mobile |<img src="readme/documentation/performance/mobile/mobile_home.png">| Height and width for images stated as reason for lower score. I tried changin them but it made no difference. |
 |Products Desktop |<img src="readme/documentation/performance/desktop/desktop_products.png">||
-|Products Mobile |<img src="readme/documentation/performance/mobile/mobile_products.png">||
+|Products Mobile |<img src="readme/documentation/performance/mobile/mobile_products.png">| A large number of images on this page. I put them all through TinyPNG to compress them.  |
 |Product Detail Desktop |<img src="readme/documentation/performance/desktop/desktop_product.png">||
-|Product Detail Mobile |<img src="readme/documentation/performance/mobile/mobile_products.png">||
+|Product Detail Mobile |<img src="readme/documentation/performance/mobile/mobile_product.png">||
 |Add Products Desktop |<img src="readme/documentation/performance/desktop/desktop_add_product.png">||
 |Add Products Mobile |<img src="readme/documentation/performance/mobile/mobile_add_product.png">||
 |Edit Products Desktop |<img src="readme/documentation/performance/desktop/desktop_edit_product.png">||
@@ -134,6 +136,8 @@ The deployed project was tested using the Lighthouse Audit tool to check for any
 |Login Mobile |<img src="readme/documentation/performance/mobile/mobile_signin.png">||
 |Logout Desktop |<img src="readme/documentation/performance/desktop/desktop_signout.png">||
 |Logout Mobile |<img src="readme/documentation/performance/mobile/mobile_signout.png">||
+|Profile Desktop |<img src="readme/documentation/performance/desktop/desktop_profile.png">||
+|Profile Mobile |<img src="readme/documentation/performance/mobile/mobile_profile.png">||
 
 </details>
 
@@ -175,6 +179,7 @@ The result for each page are listed bellow:
 | Login | <img src="readme/documentation/validation/html/signin.png"> | No Errors |
 | Logout | <img src="readme/documentation/validation/html/signout.png"> | No Errors |
 | 404 | <img src="readme/documentation/validation/html/"> | No Errors |
+| Profile | <img src="readme/documentation/validation/html/profiles.png"> | No Errors |
 
 - - - 
 
@@ -373,14 +378,15 @@ As Site Admin for the site I want to be able to:
 | --- | --- | --- | --- |
 | **Index**   |  |  | |
 | | Click on Logo | Redirection to Index page | Pass |
-| | Click on Nav Toggle | Show Nav items - Home, Recipes, Signup, Login | Pass |
-| | Click on Nav Toggle (while logged in) | Show Nav items - Home, Recipes, Logout | Pass |
-| | Click on Nav Toggle (while admin logged in) | Show Nav items - Home, Recipes, Logout, Add Recipe | Pass |
+| | Click on Nav Toggle | Show Nav items - All Products, Clothing, Brands, Special Offers, Events | Pass |
+| | Click on Nav Item | Show Nav dropdowns | Pass |
+| | Click on bag | Redirect to bag page | Pass |
 | | Click on Home button | Redirection to Index page | Pass |
-| | Click on Discover Recipes | Redirection to All Recipes page | Pass |
+| | Click my account (admin) | Dropdown menu Product Management, Event Management, Feedback, My Profile, Signout | Pass |
+| | Click my account (not admin) | Dropdown menu My Profile, Signout | Pass |
+| | Click my account (not user) | Dropdown menu My sign in, sign up | Pass |
 | | Click on Sign Up button  | Redirection to Sign Up page | Pass |
-| | Click on Login button | Redirection to Login page | Pass |
-| | Click on Discover Recipes button | Redirection to All Recipes page | Pass |
+| | Click on Sign in button | Redirection to Login page | Pass |
 | **Sign Up** |  |  |  |
 | | Click Sign Up button | Username required | Pass |
 | | Click Sign Up button (username provided) | Password required | Pass |

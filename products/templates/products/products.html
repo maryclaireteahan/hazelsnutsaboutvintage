@@ -28,6 +28,7 @@
                 <hr class="w-50 mb-1">
             </div>
         </div>
+        <!-- Sorting Dropdown -->
         <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2">
@@ -46,6 +47,7 @@
                             </select>
                         </div>
                     </div>
+                    <!-- Product Tabs -->
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
@@ -55,6 +57,7 @@
                         </p>
                     </div>
                 </div>
+                <!-- Products -->
                 <div class="row product-row">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 single-product">
