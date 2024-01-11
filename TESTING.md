@@ -145,7 +145,7 @@ The result for each page are listed bellow:
 |Page |Screenshot | Notes  | 
 |:---:|:----------------------:|---|
 | Index | <img src="readme/documentation/validation/html/index.png"> | No Errors |
-| Products | <img src="readme/documentation/validation/html/index.png"> | No Errors |
+| Products | <img src="readme/documentation/validation/html/products.png"> | No Errors |
 | Single Product | <img src="readme/documentation/validation/html/product_details.png"> | No Errors |
 | Events | <img src="readme/documentation/validation/html/events.png"> | No Errors |
 | Single Event | <img src="readme/documentation/validation/html/single_event.png"> | No Errors |
@@ -401,9 +401,9 @@ As Site Admin for the site I want to be able to:
 | | Click delete on product (only visable to admin)  | Product will be permanently deleted and User will be redirected to the Product | Pass  |
 | | Click edit on product (only visable to admin) | User is redirected to Edit Product page | Pass |
 | | Brute forcing the URL to delete product if not logged in | Redirects user to login page | Pass | 
-| | Brute forcing the URL to delete product while logged in (NOT admin) | Redirects user to error page | Pass |
+| | Brute forcing the URL to delete product while logged in (NOT admin) | Redirects user to products page with error message | Pass |
 | | Brute forcing the URL to edit product if not logged in | Redirects user to login page | Pass | 
-| | Brute forcing the URL to edit product while logged in not as (NOT admin) | Redirects user to error page | Pass |
+| | Brute forcing the URL to edit product while logged in not as (NOT admin) | Redirects user to products page with error message | Pass |
 | **Events** |  |  |  |
 | | Click button on a event | User will be redirected to the Event Detail page | Pass |
 | **Event Detail** |  |  |  |
@@ -411,9 +411,9 @@ As Site Admin for the site I want to be able to:
 | | Click delete on event (only visable to admin)  | User is redirected to Delete Event confirmation page | Pass  |
 | | Click edit on event (only visable to admin) | User is redirected to Edit event page | Pass   |
 | | Brute forcing the URL to delete event if not logged in | Redirects user to login page | Pass | 
-| | Brute forcing the URL to delete event while logged in (NOT admin) | Redirects user to error page | Pass |
+| | Brute forcing the URL to delete event while logged in (NOT admin) | Redirects user to events page with error message | Pass |
 | | Brute forcing the URL to edit event if not logged in | Redirects user to login page | Pass | 
-| | Brute forcing the URL to edit event while logged in not as (NOT admin) | Redirects user to error page | Pass |
+| | Brute forcing the URL to edit event while logged in not as (NOT admin) | Redirects user to events page with error message | Pass |
 | **Add Product** |  |  |  |
 | | Click Submit on add product form without adding content | User is prompted to enter something into each field before submitting | Pass |
 | | Click Cancel on add product form | User will be redirected to Products | Pass |
@@ -442,8 +442,12 @@ As Site Admin for the site I want to be able to:
 | | Click the submit button for feedback | All fields must be filled out before submitting | Pass |
 | **Feedback** |  |  |  |
 | | Click button on a event | User will be redirected to the Event Detail page | Pass |
+| | Brute forcing the URL to view the page if not logged in | Redirects user to login page | Pass | 
+| | Brute forcing the URL to view the page while logged in (NOT admin) | Redirects user to home page with error message | Pass |
 | **Feedback Detail** |  |  |  |
 | | Click go back button  | User is redirected to Events page | Pass  |
+| | Brute forcing the URL to view the page if not logged in | Redirects user to login page | Pass | 
+| | Brute forcing the URL to view the page while logged in (NOT admin) | Redirects user to home page with error message | Pass |
 | **Footer** | | | | 
 | | Click on Facebook Icon | Opens new tab to Facebook | Pass |
 | | Click on Instagram Icon | Opens new tab to Instagram | Pass |

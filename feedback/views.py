@@ -8,10 +8,6 @@ from .forms import FeedbackForm
 @login_required
 def feedback(request):
     """ A view to handle feedback submission """
-    if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('events'))
-
     feedback = Feedback.objects.latest('created_at')
     context = {
         'feedback': feedback,
@@ -24,7 +20,7 @@ def all_feedback(request):
     """ A view to show all feedback """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('events'))
+        return redirect(reverse('home'))
     
     if request.method == 'POST':
         feedback_form = FeedbackForm(request.POST)
@@ -44,9 +40,13 @@ def all_feedback(request):
         }
         return render(request, 'feedback/feedback.html', context)
 
-
+@login_required
 def feedback_detail(request, feedback_id):
     """ A view to show individual feedback details """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     feedback = get_object_or_404(Feedback, pk=feedback_id)
     context = {
         'feedback': feedback,
