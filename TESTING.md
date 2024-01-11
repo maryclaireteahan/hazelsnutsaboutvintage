@@ -101,9 +101,9 @@ The deployed project was tested using the Lighthouse Audit tool to check for any
 |Products Desktop |<img src="readme/documentation/performance/desktop/desktop_products.png">||
 |Products Mobile |<img src="readme/documentation/performance/mobile/mobile_products.png">||
 |Product Detail Desktop |<img src="readme/documentation/performance/desktop/desktop_product.png">||
-|Product Detail Mobile |<img src="readme/documentation/performance/mobile/desktop_product.png">||
-|Add Products Desktop |<img src="readme/documentation/performance/desktop/">||
-|Add Products Mobile |<img src="readme/documentation/performance/mobile/">||
+|Product Detail Mobile |<img src="readme/documentation/performance/mobile/mobile_products.png">||
+|Add Products Desktop |<img src="readme/documentation/performance/desktop/desktop_add_product.png">||
+|Add Products Mobile |<img src="readme/documentation/performance/mobile/mobile_add_product.png">||
 |Edit Products Desktop |<img src="readme/documentation/performance/desktop/desktop_edit_product.png">||
 |Edit Products Mobile |<img src="readme/documentation/performance/mobile/mobile_edit_product.png">||
 |Events Desktop |<img src="readme/documentation/performance/desktop/desktop_events.png">||
@@ -304,7 +304,7 @@ The [Code Institute Python Linter](https://pep8ci.herokuapp.com)was used to vali
 
 The implemented User Stories were tested during the development of this project and also after it was finished.
 
-### Site User
+### **Site User**
 
 - - -
 
