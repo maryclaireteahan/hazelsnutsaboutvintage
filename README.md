@@ -1,10 +1,10 @@
-# Let's Eat
+# Hazel's Nuts About Vintage
 
-"Let's Eat" represents my utilization of the Django Full Stack framework for Portfolio Project 4. This fully responsive website is strategically designed with an inviting color scheme and an intuitive layout to optimize user engagement. The deliberate design choices aim to attract users by offering a seamless browsing experience for recipes categorized for easy navigation. The focus lies not only on aesthetics but also on functionality, aiming to maintain user interest and encourage prolonged interaction. The website's design ethos is centered on user retention through an interface that facilitates easy exploration, providing users with a platform where they can effortlessly discover, comment on, and engage with a wide range of recipes.
-  
-![Am i responsive image](readme/documentation/responsiveness/amiresponsive.png)  
+"Hazel's Nuts About Vintage" is a chill online vintage shop I put together using the Django Full Stack framework for Portfolio Project 5. The website has a laid-back vibe with a straightforward layout, making it easy for you to check out a variety of cool vintage items. The design gives off a nostalgic feel, and the inviting color scheme sets the mood for a fun browsing experience. Explore the curated collection, take a trip down memory lane, and discover unique finds that tell stories of the past. Hazel's Nuts About Vintage is your go-to spot for a relaxed virtual journey into the world of timeless treasures!
 
-[Click Here To Visit Live Site](https://maryclaireteahan-letseat-0b5910f8e882.herokuapp.com/)  
+![Am i responsive image](readme/documentation/responsiveness/amiresoinsive.png)  
+
+[Click Here To Visit Live Site](https://mteahan-hazelsnutsaboutvintage-c846730bed11.herokuapp.com/)  
 
 ## Table Of Contents:
 1. [Design & Planning](#design-&-planning)
@@ -27,10 +27,9 @@
     * [Products page](#products-page)
     * [Single Product page](#single-Product-page)
     * [Edit Product page](#edit-Product-page)
-    * [Delete Product page](#delete-Product-page)
     * [Create Product page](#create-Product-page)
-    * [Login page](#login-page)
-    * [Logout page](#logout-page)
+    * [Sign in page](#signin-page)
+    * [Sign Out page](#Signout-page)
     * [Sign up page](#signup-page)
     * [404 Error page](#404-error-page)
 
@@ -50,20 +49,22 @@
 ### User Stories
 
 #### Site User
-- As a Site User, I can view a list of recipes so that I can choose one to read
-- As a Site User, I can click on a recipe post so that I can read the full recipe
-- As a Site User, I can click a like button so that I can like a recipe and then unlike if needed
-- As a Site User, I can post a comment on a recipe post so that I can interact with the site's community
+- As a Site User, I can view a list of products so that I can choose one to buy
+- As a Site User, I can click on a product so that I can view the product in more detail and add it to my bag
+- As a Site User, I can click an Add to Bag button so that I can ladd the product to my bag to purchase
+- As a Site User, I can enter my details so that I can pay for the product and have it delivered to the correct address
+- As a Site User, I can give feedback so that I can let the store owner know about my experience with the online store
+- As a Site User, I can give get a coupon for a discount so that I can use it in-store
+- As a Site User, I can view a list of events so that I can see if the store is running any events I would be interested in
+- As a Site User, I can click on an event so that I can view the event in more detail
 - As a Site User, I can sign up to be a member/ login as an existing member so that I can be a part of the site's community and receive updates
-- As a Site User, I can see how many likes a post has received so that I can see what recipes are most popular
-- As a Site User, I can see who commented what under each post so that I can see what the Site Users think of specific recipes and how they might change them
-- As a Site User, I can edit or delete my comment so that if I made a spelling error or changed my mind about what I said I can edit or delete it
 
 #### Site Admin
-- As a Site Admin, I can see how many likes a post has received so that I can see what recipes are most popular
-- As a Site Admin, I can see who commented what under each post so that I can see what the Site Users think of specific recipes and how they might change them
-- As a Site Admin, I can create, edit and delete recipe posts so that I can be in control of what content is shown to Site Users
-- As a Site Admin, I can assign a category to the recipe post so that Site Users will be able to find recipes specific to what they need
+- As a Site Admin, I can create, edit and delete products so that I can be in control of what products are shown to Site Users
+- As a Site Admin, I can create, edit and delete events so that I can be in control of what events are shown to Site Users
+- As a Site Admin, I can assign a category, size and brand to the products so that Site Users will be able to find products specific to what they need
+- As a Site Admin, I can offer a coupon after a purchase so that I can draw Site Users users back to my store
+
 
 
 ### Wireframes
@@ -149,7 +150,9 @@ I divided the project board into 3 sections:
 
 <details>
 
-Google Fonts were used to import Oxygen font into styles.css.  It was chosen as it is a simple, font with a strong clear feel that doesn't distract from the content.
+
+I opted for Courier New as the font for its retro vintage feel, which aligns perfectly with the nostalgic theme of Hazel's Nuts About Vintage. The typewriter-style characters evoke a sense of authenticity, adding a charming touch to the overall design. Additionally, Courier New's clear and distinct lettering ensures easy readability, enhancing the user experience and allowing visitors to effortlessly engage with the captivating stories each vintage item has to tell on the website.
+
 </details>
 
 - - -
@@ -158,12 +161,12 @@ Google Fonts were used to import Oxygen font into styles.css.  It was chosen as 
 
 <details>
 
-For this website, I chose a hero image and based the color palette off of that. There is a contrast between the dark fonts and light backgrounds in order to keep the site accessible.
+The website colors for Hazel’s Nuts About Vintage were chosen to match the colors of the physical vintage shop. The teal color represents the store’s exterior paint, while the red and yellow colors are inspired by the vintage signs and posters inside the shop. These colors create a consistent and harmonious brand identity for Hazel’s Nuts About Vintage.
   
 <details><summary>Color palette</summary>
-<img src="readme/documentation/color/palette1.png">
-<img src="readme/documentation/color/palette2.png">
-<img src="readme/documentation/color/palette3.png">
+<img src="readme/documentation/color/color_palette.png">
+<img src="readme/documentation/color/hazelsnutsaboutvintagehero.jpg">
+<img src="readme/documentation/color/hazelsnutsaboutvintagelogo.jpg">
 </details>
 </details>
 
@@ -187,24 +190,26 @@ Below is the database diagram that I created using LucidCharts.
 <details>
 
 ### Navigation Bar
-- The navigation bar has a consistent look and placement on all three pages of the website supporting easy navigation.  It includes a simple Logo, and the menu options: Home page, Recipes page, Login page, Signup page, Logout page and Add Recipe and is responsive on multiple screen sizes. The menu options are hidden until a burger icon is clicked which then brings up the menu options.
+- The navigation bar has a consistent look and placement on all three pages of the website supporting easy navigation.  It includes a simple Logo, and the menu options: Products dropdown, Brands dropdown, Clothing dropdown, Special Offer dropdown and an Events page. It also features a user dropdown give user the ability to sign up, sign in, sign out, view their profile and for admin users- add products and events. There is also a bag icon which will brinf the user to the big page to view items they've already added. The nav bar is responsive on multiple screen sizes. The menu options are hidden until a burger icon is clicked which then brings up the menu options.
 
 <details><summary>Navbar</summary>
-<img src="readme/documentation/features/base/header.png">
-<img src="readme/documentation/features/base/header_items.png">
-
+<img src="readme/documentation/features/nav/nav_1.png">
+<img src="readme/documentation/features/nav/nav_2.png">
+<img src="readme/documentation/features/nav/nav_3.png">
+<img src="readme/documentation/features/nav/nav_4.png">
+<img src="readme/documentation/features/nav/nav_5.png">
 </details>
 
 
 ### Footer
-- The footer is featured on all five pages and is identical on each page making it easy to use.  It contains links to Adrienne's social media accounts, facebook, twitter, youtube, instagram and linkedin. The links are represented by favicon images of those sites' own logos.
+- The footer is featured on all five pages and is identical on each page making it easy to use.  It contains links to Hazels's Nuts About Vintage's facebook and instagram. The links are represented by favicon images of those sites' own logos. There is also an option to subscribe to a newsletter.
   
 <details><summary>Footer</summary>
-<img src="readme/documentation/features/base/footer.png">
+<img src="readme/documentation/features/footer/footer.png">
 </details>
 
 ### Index Page
-- This section of text introduces the user to the blogger, Mary, and gives them a sense of what to expect if they continue reading the blog. The user is enticed to with a "Discover Recipes" button to move to the recipes page.
+- This section of text introduces the user to the store with a statement image of the actual storefront. This is layered over with a box containing a brief sentence and the call to action. The user is enticed to with a "Shop Now" button to move to the product page.
 
 <details><summary>Index Hero</summary>
 <img src="readme/documentation/features/index/hero.png">
@@ -214,105 +219,133 @@ Below is the database diagram that I created using LucidCharts.
 </details>
 
 
-### Recipes page
-- This section of text gives the user five categories of recipes to browse, Breakfast, Lunch, Dinner, Dessert and Snack. The recipes are presented horizontally with use of a scrollbar if there are enough recipes that they don't fit the width of the screen size. Each recipe has a name and image, either of which can be clicked to reidirect to the recipe page.
+### Products page
+- This section of text gives the user categories of products to browse. The user is also able to sort the products by price, brand or category. Each product has an image or placeholder in the absence of an image, either of which can be clicked to redirect to the product page.
 
-<details><summary>Recipe Categories</summary>
-<img src="readme/documentation/features/all_recipes/categories1.png">
-<img src="readme/documentation/features/all_recipes/categories2.png">
-<img src="readme/documentation/features/all_recipes/categories3.png">
-</details>
-<details><summary>Recipe Categories Scrollbar</summary>
-<img src="readme/documentation/features/all_recipes/scrollbar.png">
+<details><summary>Products</summary>
+<img src="readme/documentation/features/products/products.png">
+<img src="readme/documentation/features/products/sort_by.png">
 </details>
 
   
-### Single Recipe page
-- This user is redirected to this section after selecting the recipe in the previous page. If the user is an admin they will see an option to edit or delete the recipe. The user will see the same image as the previous page, the ingredients and instructions. Underneath this is the comment section. Is the user has logged in they will be able to leave a comment as well as edit or delete it once posted, they will not be able to make any changes to other users' comments. If a user is not logged in they cannot leave a comment however they can read other users' comments
+### Product Detail page
+- This user is redirected to this section after selecting the product in the previous page. If the user is an admin they will see an option to edit or delete the product. The user will see the same image as the previous page, the size, price brand and a description of the product. Underneath this is the comment section. The user can add it to their bag or return to products.
 
-<details><summary>Single Recipe Like and Comment Icons</summary>
-<img src="readme/documentation/features/single_recipe/likes_comment_icons.png">
-</details><details><summary>Single Recipe Comments</summary>
-<img src="readme/documentation/features/single_recipe/comment_logged_out.png">
-<img src="readme/documentation/features/single_recipe/comment_logged_in.png">
-<img src="readme/documentation/features/single_recipe/comments.png">
-<img src="readme/documentation/features/single_recipe/edit_delete_authorised.png">
-<img src="readme/documentation/features/single_recipe/edit_delete_not_authorised.png">
+<details><summary>Product Detail</summary>
+<img src="readme/documentation/features/product_detail/single_product.png">
 </details>
 
-### Edit Comment page
-- On this page the logged in user will see a textarea which contains the comment they had already left and on which they clicked edit. The user with be able to make changes to their comment and resubmit it. 
+### Add Product page
+- Only user admin has access to this page. The user admin will be required to fill out each field before they can submit the reciproductpe which will publish immediately.
 
-<details><summary>Edit comment page</summary>
-<img src="readme/documentation/features/comment_edit/original_comment.png">
-<img src="readme/documentation/features/comment_edit/edit_box_original_comment.png">
-<img src="readme/documentation/features/comment_edit/require_edit.png">
-<img src="readme/documentation/features/comment_edit/edit_box_edited_comment.png">
-<img src="readme/documentation/features/comment_edit/edited_comment.png">
+<details><summary>Add product page</summary>
+<img src="readme/documentation/features/add_event/">
+<img src="readme/documentation/features/add_event/">
+<img src="readme/documentation/features/add_event/">
+<img src="readme/documentation/features/add_event/">
+<img src="readme/documentation/features/add_event/">
+<img src="readme/documentation/features/add_product/">
+<img src="readme/documentation/features/add_product/">
 </details>
 
-### Delete Comment page
-- The user will be redirected to this page when they click delete on their comment in order to make sure they want to delete the comment. The user will be asked if they are sure and they can either hit delete or cancel. Delete will delete the comment comepletely. Cancel will redirect to the home screen
+### Edit Product page
+- On this page the logged in user admin will see textareas in the same format as the add product form which contains the product content they had already submitted and on which they clicked edit. The user with be able to make changes to their product and resubmit it.
 
-<details><summary>Delete comment page</summary>
-<img src="readme/documentation/features/comment_delete/original_comment.png">
-<img src="readme/documentation/features/comment_delete/delete_comment.png">
-<img src="readme/documentation/features/comment_delete/comment_deleted.png">
+<details><summary>Edit product page</summary>
+<img src="readme/documentation/features/edit_product/edit_product.png">
+<img src="readme/documentation/features/edit_product/edit_product_alert.png">
+<img src="readme/documentation/features/edit_product/edit_product_error.png">
+<img src="readme/documentation/features/edit_product/edit_product_error_1.png">
+<img src="readme/documentation/features/edit_product/edit_product_error_2.png">
+<img src="readme/documentation/features/edit_product/edit_product_error_3.png">
+<img src="readme/documentation/features/edit_product/edit_product_error_4.png">
+<img src="readme/documentation/features/edit_product/edit_product_success.png">
 </details>
 
-### Create recipe page
-- Only user admin has access to this page. The user admin will be required to fill out each field before they can submit the recipe which will publish immediately.
 
-<details><summary>Create recipe page</summary>
-<img src="readme/documentation/features/admin_recipe_create/create_recipe.png">
-<img src="readme/documentation/features/admin_recipe_create/require_title.png">
-<img src="readme/documentation/features/admin_recipe_create/require_author.png">
-<img src="readme/documentation/features/admin_recipe_create/require_ingredients.png">
-<img src="readme/documentation/features/admin_recipe_create/require_instructions.png">
-<img src="readme/documentation/features/admin_recipe_create/require_image_alt.png">
-<img src="readme/documentation/features/admin_recipe_create/require_category.png">
+### Events page
+- This section of text gives the user a list of the current and upcoming events that the store owner will be holding. Only the name of the event is shown. Each event has a button that will bring the user to the event detail page.
+
+<details><summary>Events</summary>
+<img src="readme/documentation/features/products/products.png">
 </details>
 
-### Edit recipe page
-- On this page the logged in user admin will see textareas in the same format as the creat recipe form which contains the recipe content they had already submitted and on which they clicked edit. The user with be able to make changes to their recipe and resubmit it. 
+  
+### Events Detail page
+- This user is redirected to this section after selecting the event in the previous page. If the user is an admin they will see an option to edit or delete the event. The event shows the name, description, location and time and date if needed.
 
-<details><summary>Edit recipe page</summary>
-<img src="readme/documentation/features/admin_recipe_edit/edit_recipe.png">
-<img src="readme/documentation/features/admin_recipe_edit/require_title.png">
-<img src="readme/documentation/features/admin_recipe_edit/require_author.png">
-<img src="readme/documentation/features/admin_recipe_edit/require_ingredients.png">
-<img src="readme/documentation/features/admin_recipe_edit/require_instructions.png">
-<img src="readme/documentation/features/admin_recipe_edit/require_image_alt.png">
-<img src="readme/documentation/features/admin_recipe_edit/require_category.png"></details>
-
-### Delete recipe page
-- The user will be redirected to this page when they click delete on their recipe in order to make sure they want to delete the comment. The user will be asked if they are sure and they can either hit delete or cancel. Delete will delete the recipe comepletely. Cancel will redirect to the home screen
-
-<details><summary>Delete recipe page</summary>
-<img src="readme/documentation/features/admin_recipe_delete/test_recipe.png">
-<img src="readme/documentation/features/admin_recipe_delete/delete_test_recipe.png">
-<img src="readme/documentation/features/admin_recipe_delete/test_recipe_deleted.png">
+<details><summary>Events Detail</summary>
+<img src="readme/documentation/features/single_event/single_event.png">
 </details>
 
-### Login page
+### Add Events page
+- Only user admin has access to this page. The user admin will be required to fill out each field before they can submit the event which will publish immediately.
+
+<details><summary>Add Events page</summary>
+<img src="readme/documentation/features/add_event/add_event.png">
+<img src="readme/documentation/features/add_event/add_event_error_1.png">
+<img src="readme/documentation/features/add_event/add_event_error_2.png">
+<img src="readme/documentation/features/add_event/add_event_error_3.png">
+<img src="readme/documentation/features/add_event/message_add_event_success.png">
+</details>
+
+### Edit Events page
+- On this page the logged in user admin will see textareas in the same format as the add event form which contains the event content they had already submitted and on which they clicked edit. The user with be able to make changes to their event and resubmit it.
+
+<details><summary>Edit Events page</summary>
+<img src="readme/documentation/features/edit_product/edit_product.png">
+<img src="readme/documentation/features/edit_product/edit_product_alert.png">
+<img src="readme/documentation/features/edit_product/edit_product_error.png">
+<img src="readme/documentation/features/edit_product/edit_product_error_1.png">
+<img src="readme/documentation/features/edit_product/edit_product_error_2.png">
+<img src="readme/documentation/features/edit_product/edit_product_error_3.png">
+<img src="readme/documentation/features/edit_product/edit_product_error_4.png">
+<img src="readme/documentation/features/edit_product/edit_product_success.png">
+</details>
+
+### Delete Events page
+- The user will be redirected to this page when they click delete on their event in order to make sure they want to delete the event. The user will be asked if they are sure and they can either hit delete or cancel. Delete will delete the event comepletely. Cancel will redirect to the events page
+
+<details><summary>Delete Events page</summary>
+<img src="readme/documentation/features/delete_event/delete_event.png">
+<img src="readme/documentation/features/delete_event/message_delete_event_success.png">
+</details>
+
+### Feedback page
+- This section of text gives the admin user a list of the feedback that customers have sent. Only the subject of the feedback is show. It is a clickable link which will bring the admin user to that specifec feedback detail page.
+
+<details><summary>Feedback</summary>
+<img src="readme/documentation/features/feedback/feedback.png">
+</details>
+
+### Feedback Detail page
+- The admin user is redirected to this section after selecting the feedback in the previous page. The user will be able to read the subject and description of the feedback. The only functionality is in a button to the return to the previous page.
+
+<details><summary>Feedback Detail</summary>
+<img src="readme/documentation/features/feedback_detail/feedback_detail.png">
+</details>
+
+### Add Feedback section
+- This section is located on the checkout success page. The user is promted to add a subject and description to send to the store owner.
+
+<details><summary>Add Feedback section</summary>
+<img src="readme/documentation/features/checkout_success/checkout_sucess_sucess.png">
+</details>
+
+### Sign In page
 - Login page is a basic django allauth form that has 2 input fields for username and password with sign in the button below it
 - A User will also have description links to either signup for the website if he doesnt have an account which will redirect a user the "Sign up" page
 
-<details><summary>Login page</summary>
-<img src="readme/documentation/features/login/login.png">
-<img src="readme/documentation/features/login/no_username.png">
-<img src="readme/documentation/features/login/no_password.png">
-<img src="readme/documentation/features/login/wrong_username.png">
-<img src="readme/documentation/features/login/wrong_password.png">
-<img src="readme/documentation/features/login/sucessful_login.png">
+<details><summary>Sign In page</summary>
+<img src="readme/documentation/features/allauth/sign_in/sign_in.png">
+<img src="readme/documentation/features/allauth/sign_in/sign_in_error_1.png">
 </details>
 
-### Logout page
+### Sign Out page
 - The user will be redirected to this page when they click logout. The user will be asked if they are sure they want to logout and they can either hit logout or cancel. Logout will log the user out. Cancel will redirect to the home screen
 
-<details><summary>Logout page</summary>
-<img src="readme/documentation/features/logout/logout.png">
-<img src="readme/documentation/features/logout/logged_out.png">
+<details><summary>Sign Out page</summary>
+<img src="readme/documentation/features/allauth/sign_out/sign_out.png">
 </details>
 
 ### Signup page
@@ -321,25 +354,24 @@ Below is the database diagram that I created using LucidCharts.
 - After inputting all the fields and clicking sign-up button user will be automatically logged in and redirected to the home page.
 
 <details><summary>Sign up page</summary>
-<img src="readme/documentation/features/signup/signup.png">
-<img src="readme/documentation/features/signup/require_username.png">
-<img src="readme/documentation/features/signup/require_password.png">
-<img src="readme/documentation/features/signup/require_password_again.png">
-<img src="readme/documentation/features/signup/password_errors1.png">
-<img src="readme/documentation/features/signup/password_errors2.png">
-<img src="readme/documentation/features/signup/sucessful_signup.png">
+<img src="readme/documentation/features/allauth/sign_up/sign_up.png">
+<img src="readme/documentation/features/allauth/sign_up/sign_up_error_1.png">
+<img src="readme/documentation/features/allauth/sign_up/sign_up_error_2.png">
+<img src="readme/documentation/features/allauth/sign_up/sign_up_error_3.png">
+<img src="readme/documentation/features/allauth/sign_up/sign_up_error_4.png">
+<img src="readme/documentation/features/allauth/sign_up/sign_up_error_5.png">
+
 </details>
 
 ### 404 Error Page
-- If an invalid url is input or an unauthorised user tries to create a recipe or edit/delete a recipe or another user's comment by brute forcing their urls they will see this page.
+- If an invalid url is input or an unauthorised user tries to create a product or event or edit/delete a product or event by brute forcing their urls they will see this page.
 
 <details><summary>404 Error page</summary>
-<img src="readme/documentation/features/404/does_not_exist.png">
-<img src="readme/documentation/features/404/create_recipe_not_auth.png">
-<img src="readme/documentation/features/404/edit_recipe_not_auth.png">
-<img src="readme/documentation/features/404/delete_recipe_not_auth.png">
-<img src="readme/documentation/features/404/edit_comment_not_auth.png">
-<img src="readme/documentation/features/404/delete_recipe_not_auth.png">
+<img src="readme/documentation/features/404/add_event_not_auth.png">
+<img src="readme/documentation/features/404/add_product_not_auth.png">
+<img src="readme/documentation/features/404/delete_event_not_auth.png">
+<img src="readme/documentation/features/404/edit_event_not_auth.png">
+<img src="readme/documentation/features/404/edit_product_not_auth.png">
 </details>
 
 </details>
@@ -351,11 +383,10 @@ Below is the database diagram that I created using LucidCharts.
 <details>
 
 There are 3 features that I would like to implement in the next iteration that would improve user experience and attract more traffic to my website
-- Give users the option to reply to other users' comments
-- Allow users to reset their passwords
-- Add a top picks section where the user admin can update their top picks of their recipes weekly
-- Have the user redirected to the relevant recipe page when edit or delete their comment on that recipe 
-- Have the admin redirected to the relevant recipe page when edit or delete that recipe or create a recipe 
+- Create a new coupon that is unique to each order number
+- Add a barcode to the bottom of the coupon
+- Add functionality to apply discounts to products if the user has a valid code
+- Remove the coupon button as it is out of place and add a modal that is triggered after either the purchase is complete or feedback is give. The Coupon will also be sent to the users email address
 
 </details>
 
@@ -393,6 +424,7 @@ There are 3 features that I would like to implement in the next iteration that w
 - dj3-cloudinary-storage - A Django package that facilitates integration with Cloudinary storage.
 - Django - A python package for the Django framework.
 - django-allauth - An integrated set of Django applications addressing user authentication, registration and account management.
+- django-countries - A package that supplies a list of all the countries for address purposes.
 - django-crispy-forms - A Django package that provides tags and filters to control the rendering behaviour of Django forms. 
 - django-summernote - is a third-party package that provides a rich text editor widget for Django web applications.
 - gunicorn - A Python WSGI HTTP Server for UNIX.
@@ -401,7 +433,9 @@ There are 3 features that I would like to implement in the next iteration that w
 - python3-openid - A set of Python packages to support use of the OpenID decentralized identity system.
 - pytz - A Python package for world timezone definitions, modern and historical.
 - requests-oauthlib - A Python package for OAuthlib authentication support for Requests.
+- shortuuid==1.0.11 - A package for creating random series of numbers and letters.
 - sqlparse - A non-validating SQL parser for Python.
+- stripe - A package for making secure payments online.
 
 </details>
 
@@ -420,7 +454,7 @@ The testing section can be found [here](TESTING.md).
 
 <details>
 
-The live deployment application can be found on [Heroku](https://maryclaireteahan-letseat-0b5910f8e882.herokuapp.com/).
+The live deployment application can be found on [Heroku](https://mteahan-hazelsnutsaboutvintage-c846730bed11.herokuapp.com/).
 
 ###   Local Development
 
@@ -431,7 +465,7 @@ To fork the repository:
 
 1. Log in (or sign up) to Github.
 
-2. Go to the repository for this project, [letseat](https://github.com/maryclaireteahan/letseat).
+2. Go to the repository for this project, [hazelsnutsaboutvintage](https://mteahan-hazelsnutsaboutvintage-c846730bed11.herokuapp.com/).
 
 
 3. Click the Fork button in the top right corner.
@@ -442,7 +476,7 @@ To clone the repository:
 
 1. Log in (or sign up) to GitHub.
 
-2. Go to the repository for this project, [letseat](https://github.com/maryclaireteahan/letseat).
+2. Go to the repository for this project, [hazelsnutsaboutvintage](https://mteahan-hazelsnutsaboutvintage-c846730bed11.herokuapp.com/).
 
 3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 
@@ -451,7 +485,7 @@ To clone the repository:
 5. Type the following command in the terminal (after the git clone you will need to paste the link you copied in step 3 above):
 
     ```bash
-    git clone https://github.com/maryclaireteahan/letseat
+    git clone https://mteahan-hazelsnutsaboutvintage-c846730bed11.herokuapp.com/
     ```
 
 6. Set up a virtual environment (this step is not required if you are using the Code Institute Template in GitPod as this will already be set up for you).
@@ -607,12 +641,11 @@ python3 manage.py runserver
 
 - [Stack Overflow](https://stackoverflow.com/) 
 - [W3schools](https://www.w3schools.com/) 
-- [CodeInstitute](https://learn.codeinstitute.net/) for their walkthrough project, which guided me with website build especially for publishing posts, comments and likes section which I code along with the video with few adjustments
+- [CodeInstitute](https://learn.codeinstitute.net/) for their Blog and Boutique Ado walkthrough project, which guided me with website build especially for publishing products and events, Stripe Payments section which I code along with the video with few adjustments
 - [BBC Good Food](https://www.bbcgoodfood.com/) for providing me some text and useful information for my posts
 - [youtube](https://www.youtube.com/) videos from **Dee Mc**. I watched her Django Recipe Sharing Tutorial from which I got a lot of help for the overall development for a Django project.
 - [Medium](https://medium.com/) in particular, an article by **Adi Ramadhan**, Django CRUD with Forms and Bootstrap Template, for help coding in CRUD functionality
 - [Django Documentation](https://docs.djangoproject.com/en/4.2/) For all queries regarding django including, models, views, forms, urls, settings, alert messages
-- [Shopify](https://www.shopify.com/) for providing me with tools to easier generate my idea and create logo
 - [Djangoforbeginners](https://djangoforbeginners.com/) for providing useful information abut basic concepts and setup for django
 - [Lucidchart](https://lucid.app/) for providing me with tools to create my database system
 - [Balsamiq](https://balsamiq.com/wireframes/) was used to create wireframes
