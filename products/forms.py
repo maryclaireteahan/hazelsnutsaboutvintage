@@ -8,7 +8,7 @@ class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
         fields = '__all__'
-        
+
         widgets = {
             'name': forms.TextInput(attrs={'placeholder': 'Enter product name'}),
             'description': forms.Textarea(attrs={'placeholder': 'Enter product description'}),
@@ -19,7 +19,7 @@ class ProductForm(forms.ModelForm):
             'image': forms.FileInput(attrs={'placeholder': 'Select product image'}),
             'image_url': forms.URLInput(attrs={'placeholder': 'Enter product image URL'}),
             'sku': forms.TextInput(attrs={'placeholder': 'Enter product SKU'}),
-    }
+        }
 
     image = forms.ImageField(label='Image',
                              required=False, widget=CustomClearableFileInput)
