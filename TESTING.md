@@ -26,7 +26,7 @@ The deployed application was tested on multiple devices to check for responsiven
 
 It works as expected according to the wireframes and no issue was found.
 
-<img src="readme/documentation/responsiveness/amiresponsive.png">
+<img src="readme/documentation/responsiveness/amiresoinsive.png">
 
 |Device| Screenshot | 
 |:---|:---: |
@@ -51,7 +51,7 @@ The deployed project was tested on multiple browsers to check for compatibility 
 |Browser | Screenshot | 
 |:---:|:---: |
 | Chrome | <img src="readme/documentation/browser/chrome.png"> |
-| Edge  | <img src="readme/documentation/browser/edge.png"> |
+| Edge  | <img src="readme/documentation/browser/internet_explorer.png"> |
 | Firefox |  <img src="readme/documentation/browser/firefox.png"> |
 
 </details>
@@ -156,7 +156,7 @@ The result for each page are listed bellow:
 
 |Page |Screenshot | Notes  | 
 |:---:|:----------------------:|---|
-| Index | <img src="readme/documentation/validation/html/index.png"> | No Errors |
+| Index | <img src="readme/documentation/validation/html/home.png"> | No Errors |
 | Products | <img src="readme/documentation/validation/html/products.png"> | No Errors |
 | Single Product | <img src="readme/documentation/validation/html/product_details.png"> | No Errors |
 | Events | <img src="readme/documentation/validation/html/events.png"> | No Errors |
@@ -171,10 +171,10 @@ The result for each page are listed bellow:
 | Coupon | <img src="readme/documentation/validation/html/coupon.png"> | No Errors |
 | Feedback | <img src="readme/documentation/validation/html/feedback.png"> | No Errors |
 | Single Feedback | <img src="readme/documentation/validation/html/feedback_detail.png"> | No Errors |
-| Signup | <img src="readme/documentation/validation/html/signup.png"> | Error with signup form not accessible |
+| Signup | <img src="readme/documentation/validation/html/signup.png"> | No Errors |
 | Login | <img src="readme/documentation/validation/html/signin.png"> | No Errors |
 | Logout | <img src="readme/documentation/validation/html/signout.png"> | No Errors |
-| 404 | <img src="readme/documentation/validation/html/404.png"> | No Errors |
+| 404 | <img src="readme/documentation/validation/html/"> | No Errors |
 
 - - - 
 
